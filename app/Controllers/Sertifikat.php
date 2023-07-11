@@ -29,28 +29,18 @@ class Sertifikat extends BaseController
         echo View('layout/footer');
     }
 
-    public function created()
-    {
-        $data = [
-            'nama' => $nama,
-            'email'  => $email,
-            'nowa'  => $nowa,
-            'alamat' => $alamat,
-        ];
-        $db = db_connect();
-        $db->table('pendaftaran')->insert($data);
-        // $db->save($data);
-        return redirect('pendaftaranwebinar');
-        // return $this->response->redirect(site_url('/pendaftaranwebinar'));
-        // Produces: INSERT INTO mytable (title, name, date) VALUES ('{$title}', '{$name}', '{$date}')
-        // echo View('pendaftaranwebinar', $data);
-    }
-
     public function presensi()
     {
         echo view('layout/header');
         echo View('prisensi');
         echo View('layout/footer');
+    }
+
+    public function hasil()
+    {
+        echo view('layout/header');
+        echo View('deskripsi');
+        echo View('layout/footer');  
     }
     
 }
