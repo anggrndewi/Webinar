@@ -8,8 +8,13 @@ class Sertifikat extends BaseController
 {
     public function home()
     {
+        $db = db_connect();
+        $query =$db->query('SELECT * FROM webinar')->getResult();
+        
+        $data['deskwebinar'] = $query;
+
         echo view('layout/header');
-        echo View ('Home');
+        echo View ('Home', $data);
         echo View('layout/footer');
     }
 
