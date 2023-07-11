@@ -34,6 +34,7 @@ $routes->get('/sertifikat', 'Sertifikat::index/$1');
 $routes->get('/pendaftaran', 'Sertifikat::pendaftaran');
 $routes->post('/created', 'Sertifikat::created');
 $routes->get('/presensi', 'Sertifikat::presensi');
+$routes->post('/input', 'Sertifikat::storepresensi');
 
 /*
  * --------------------------------------------------------------------

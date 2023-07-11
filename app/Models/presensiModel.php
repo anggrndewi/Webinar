@@ -4,17 +4,14 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class pendaftaranmodel extends Model
+class presensiModel extends Model
 {
-    protected $table      = 'pendaftaran';
+    protected $table      = 'sertifikat';
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true;
 
-    protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
-
-    protected $allowedFields = ['name', 'email', 'nowa', 'alamat'];
+    protected $allowedFields = ['name', 'email', 'nowa', 'alamat', 'bukti'];
 
     // Dates
     protected $useTimestamps = false;
