@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class pendaftaranmodel extends Model
 {
-    protected $table      = 'users';
+    protected $table      = 'pendaftaran';
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true;
@@ -14,7 +14,7 @@ class pendaftaranmodel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['name', 'email'];
+    protected $allowedFields = ['name', 'email', 'nowa', 'alamat'];
 
     // Dates
     protected $useTimestamps = false;

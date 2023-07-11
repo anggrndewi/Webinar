@@ -649,3 +649,179 @@ in APPPATH\Views\tampildatacustomer.php on line 25.
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:11:39 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 21.
+ 1 APPPATH\Controllers\Sertifikat.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:15:36 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 21.
+ 1 APPPATH\Controllers\Sertifikat.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:19:03 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 21.
+ 1 APPPATH\Controllers\Sertifikat.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:19:04 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 21.
+ 1 APPPATH\Controllers\Sertifikat.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:19:32 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 21.
+ 1 APPPATH\Controllers\Sertifikat.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:20:02 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 21.
+ 1 APPPATH\Controllers\Sertifikat.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:20:03 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 21.
+ 1 APPPATH\Controllers\Sertifikat.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created('$1')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:27:48 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 26.
+ 1 APPPATH\Controllers\Sertifikat.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:28:09 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 26.
+ 1 APPPATH\Controllers\Sertifikat.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:31:03 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 26.
+ 1 APPPATH\Controllers\Sertifikat.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:32:30 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 26.
+ 1 APPPATH\Controllers\Sertifikat.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:33:18 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 26.
+ 1 APPPATH\Controllers\Sertifikat.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:35:26 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 26.
+ 1 APPPATH\Controllers\Sertifikat.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:37:45 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 26.
+ 1 APPPATH\Controllers\Sertifikat.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:37:56 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 26.
+ 1 APPPATH\Controllers\Sertifikat.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:39:08 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 26.
+ 1 APPPATH\Controllers\Sertifikat.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:46:16 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 26.
+ 1 APPPATH\Controllers\Sertifikat.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 08:50:02 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 26.
+ 1 APPPATH\Controllers\Sertifikat.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 09:07:17 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 26.
+ 1 APPPATH\Controllers\Sertifikat.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 09:27:11 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 26.
+ 1 APPPATH\Controllers\Sertifikat.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 09:27:51 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 26.
+ 1 APPPATH\Controllers\Sertifikat.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-10 10:15:15 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 26.
+ 1 APPPATH\Controllers\Sertifikat.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
