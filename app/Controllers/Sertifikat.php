@@ -8,7 +8,9 @@ class Sertifikat extends BaseController
 {
     public function home()
     {
-       echo View ('Home');
+        echo view('layout/header');
+        echo View ('Home');
+        echo View('layout/footer');
     }
 
     public function index()
@@ -22,7 +24,9 @@ class Sertifikat extends BaseController
 
     public function pendaftaran()
     {
+        echo view('layout/header');
         echo View('pendaftaranwebinar');
+        echo View('layout/footer');
     }
 
     public function created()
@@ -40,6 +44,13 @@ class Sertifikat extends BaseController
         // return $this->response->redirect(site_url('/pendaftaranwebinar'));
         // Produces: INSERT INTO mytable (title, name, date) VALUES ('{$title}', '{$name}', '{$date}')
         // echo View('pendaftaranwebinar', $data);
+    }
+
+    public function presensi()
+    {
+        echo view('layout/header');
+        echo View('prisensi');
+        echo View('layout/footer');
     }
     
 }
