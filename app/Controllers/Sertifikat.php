@@ -42,7 +42,6 @@ class Sertifikat extends BaseController
         echo View('layout/footer');
     }
 
-<<<<<<< HEAD
     public function storepresensi()
     {
         $presensi = new presensiModel();
@@ -62,13 +61,14 @@ class Sertifikat extends BaseController
             $presensi->save($data);
             return redirect()->back()->with('message', 'Berhasil Submit Data!');
         }
-=======
-    public function hasil()
+    }
+
+        public function hasil()
     {
         echo view('layout/header');
         echo View('deskripsi');
         echo View('layout/footer');  
->>>>>>> e74702e03cfee164592f3fb7c8d401ed452a4535
+
     }
     
 }
