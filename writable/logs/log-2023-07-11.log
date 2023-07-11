@@ -48,6 +48,22 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+<<<<<<< HEAD
+CRITICAL - 2023-07-11 07:33:29 --> Undefined variable $nama
+in APPPATH\Controllers\Sertifikat.php on line 35.
+ 1 APPPATH\Controllers\Sertifikat.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Controllers\\Sertifikat.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->created()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-11 08:44:38 --> Invalid file: "deskripsi.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('deskripsi.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('deskripsi', [], true)
+ 3 APPPATH\Controllers\Sertifikat.php(42): view('deskripsi')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->hasil()
+=======
 CRITICAL - 2023-07-11 07:48:33 --> Undefined variable $tampildata
 in APPPATH\Views\tampildatacustomer.php on line 25.
  1 APPPATH\Views\tampildatacustomer.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tampildata', 'D:\\xampp\\htdocs\\Webinar\\app\\Views\\tampildatacustomer.php', 25)
@@ -138,10 +154,19 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('deskripsiwebinar', [], true)
  3 APPPATH\Controllers\Sertifikat.php(16): view('deskripsiwebinar', [...])
  4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->home('$1')
+>>>>>>> 5723cfb8d0d73a52965c3c0125ba95eb3c4a124b
  5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
  6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+<<<<<<< HEAD
+CRITICAL - 2023-07-11 08:44:43 --> Invalid file: "deskripsi.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('deskripsi.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('deskripsi', [], true)
+ 3 APPPATH\Controllers\Sertifikat.php(42): view('deskripsi')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->hasil()
+=======
 CRITICAL - 2023-07-11 07:56:57 --> Invalid file: "deskripsiwebinar.php"
 in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('deskripsiwebinar.php')
@@ -296,6 +321,7 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('deskripsiwebinar', [], true)
  3 APPPATH\Controllers\Sertifikat.php(16): view('deskripsiwebinar', [...])
  4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Sertifikat->home('$1')
+>>>>>>> 5723cfb8d0d73a52965c3c0125ba95eb3c4a124b
  5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sertifikat))
  6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

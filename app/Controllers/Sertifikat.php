@@ -35,23 +35,6 @@ class Sertifikat extends BaseController
         echo View('layout/footer');
     }
 
-    public function created()
-    {
-        $data = [
-            'nama' => $nama,
-            'email'  => $email,
-            'nowa'  => $nowa,
-            'alamat' => $alamat,
-        ];
-        $db = db_connect();
-        $db->table('pendaftaran')->insert($data);
-        // $db->save($data);
-        return redirect('pendaftaranwebinar');
-        // return $this->response->redirect(site_url('/pendaftaranwebinar'));
-        // Produces: INSERT INTO mytable (title, name, date) VALUES ('{$title}', '{$name}', '{$date}')
-        // echo View('pendaftaranwebinar', $data);
-    }
-
     public function presensi()
     {
         echo view('layout/header');
@@ -59,6 +42,7 @@ class Sertifikat extends BaseController
         echo View('layout/footer');
     }
 
+<<<<<<< HEAD
     public function storepresensi()
     {
         $presensi = new presensiModel();
@@ -78,6 +62,13 @@ class Sertifikat extends BaseController
             $presensi->save($data);
             return redirect()->back()->with('message', 'Berhasil Submit Data!');
         }
+=======
+    public function hasil()
+    {
+        echo view('layout/header');
+        echo View('deskripsi');
+        echo View('layout/footer');  
+>>>>>>> e74702e03cfee164592f3fb7c8d401ed452a4535
     }
     
 }
