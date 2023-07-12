@@ -32,16 +32,5 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="background-image: 'lampung cerdas.webp';">
     <div class="container-fluid">
         <img class="navbar-brand" src="img/lampung cerdas.webp" alt="logo" width="100">
-    
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-            <a class="nav-link" href="<?= base_url(); ?>/home">Home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">Pendaftaran</a>
-            </li>
-        </ul>
-        </div>
     </div>
     </nav>
