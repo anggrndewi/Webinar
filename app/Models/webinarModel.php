@@ -12,13 +12,7 @@ class webinarModel extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
 
     protected $allowedFields = ['judul', 'waktu', 'deskwebinar', 'poster', 'sertifikat', 'namapemateri', 'deskpemateri'];
 
-    // Dates
-    protected $useTimestamps = false;
-    protected $dateFormat    = 'datetime';
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
 }

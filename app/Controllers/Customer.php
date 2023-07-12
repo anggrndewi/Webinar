@@ -23,14 +23,20 @@ class Customer extends BaseController
     public function detailwebinar($id=NULL)
     {
         $deskwebinar = new webinarModel();
-        $data = $deskwebinar->findAll();
-        // $data = ['deskwebinar' => $deskwebinar->WHERE('id', $id)->find()];
-        dd($data);
+        
+        $data = ['deskwebinar' => $deskwebinar->WHERE('id', $id)->find()];
 
-        // echo view('layout/header', $data);
-        // echo View('deskripsi');
-        // echo View('layout/footer');  
+        echo view('layout/header', $data);
+        echo View('deskripsi');
+        echo View('layout/footer');  
 
+    }
+
+    public function lihat()
+    {
+        echo view('layout/header');
+        echo View('lihat');
+        echo View('layout/footer');  
     }
 
     public function pendaftaran()
