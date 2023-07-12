@@ -19,15 +19,6 @@ class Sertifikat extends BaseController
         echo View('layout/footer');
     }
 
-    public function index()
-    {
-        $db = db_connect();
-        $query =$db->query('SELECT * FROM pendaftaran')->getResult();
-        
-        $data['tampildata'] = $query;
-        echo View('tampildatacustomer', $data);
-    }
-
     public function pendaftaran()
     {
         echo view('layout/header');
