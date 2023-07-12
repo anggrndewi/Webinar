@@ -52,7 +52,6 @@ class Customer extends BaseController
             $presensi->save($data);
             return redirect()->back()->with('message', 'Berhasil Submit Data!');
         }
-<<<<<<< HEAD:app/Controllers/Sertifikat.php
     }
 
         public function hasil()
@@ -61,8 +60,6 @@ class Customer extends BaseController
         echo View('deskripsi');
         echo View('layout/footer');  
 
-=======
->>>>>>> e0892adc58246a14f1d543bbf314cbd7bb5dcc50:app/Controllers/Customer.php
     }
     
 }
