@@ -15,19 +15,21 @@ class Customer extends BaseController
         
         $data['deskwebinar'] = $query;
 
-        echo view('layout/header');
-        echo View ('Home', $data);
+        echo view('layout/header', $data);
+        echo View ('Home');
         echo View('layout/footer');
     }
 
-    public function hasil()
+    public function detailwebinar($id=NULL)
     {
-        $desk = new webinarModel();
-        $data = ['desk' => $desk->findAll()];
+        $deskwebinar = new webinarModel();
+        $data = $deskwebinar->findAll();
+        // $data = ['deskwebinar' => $deskwebinar->WHERE('id', $id)->find()];
+        dd($data);
 
-        echo view('layout/header');
-        echo View('deskripsi');
-        echo View('layout/footer');  
+        // echo view('layout/header', $data);
+        // echo View('deskripsi');
+        // echo View('layout/footer');  
 
     }
 
@@ -36,6 +38,19 @@ class Customer extends BaseController
         echo view('layout/header');
         echo View('pendaftaranwebinar');
         echo View('layout/footer');
+    }
+
+    public function storependaftaran()
+    {
+        $pendaftaran = new pendaftaranmodel();
+            $data = [
+                'nama' => $this->request->getPost('nama'),
+                'email' => $this->request->getPost('email'),
+                'nowa' => $this->request->getPost('nowa'),
+                'alamat' => $this->request->getPost('alamat'),
+            ];
+            $pendaftaran->save($data);
+            return redirect()->back()->with('message', 'Berhasil Submit Data!');
     }
 
     public function presensi()

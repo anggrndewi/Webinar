@@ -3,7 +3,7 @@
         <div class="col-lg-8">
             <div class="bg-light text-center p-5">
                 <h1 class="mb-4">Pendaftaran</h1>
-                <form method="POST" action="<?= base_url('created');?>">
+                <form method="POST" action="/daftar">
                     <div class="row g-3">
                         <div class="col-12 col-sm-6">
                             <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;" name="nama">

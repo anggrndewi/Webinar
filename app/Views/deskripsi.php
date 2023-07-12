@@ -1,49 +1,24 @@
-
-
-<div class="center-content">
-  <h1>Paket Try OUT CPNS sukses jawab cepat soal SKD</h1>
-  
-  <div style="text-align: center;">
-    <img src="img/webinar 1.jpg" alt="Deskripsi Gambar">
-  </div>
-  
-  <div class="deskripsi">
-    <h2>Deskripsi</h2>
-    <ul>
-      <li>Materi terstruktur dan lengkap: Paket ini menyediakan materi yang terstruktur dengan topik yang relevan dan komprehensif untuk persiapan tes SKD CPNS.</li>
-      <li>Latihan soal yang variatif: Anda akan memiliki kesempatan untuk berlatih dengan berbagai jenis soal yang sering muncul dalam tes SKD.</li>
-      <li>Solusi dan pembahasan yang komprehensif: Setiap soal dilengkapi dengan solusi dan pembahasan yang komprehensif.</li>
-    </ul>
-  </div>
-
-  <h1>pemateri</h1>
-  <div class="pemateri">
-    <img src="img/Foto pemateri webinar 1.jpg" alt="Foto Pemateri">
-    <span class="nama-pemateri">Nizar Dangkua Impressive Collaboration Coach and Director PT Nirwana Pancakarya Dayacipta</span>
-  </div>
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keuntungan dan Voucher Belajar Gratis</title>
-    
-</head>
 <body>
-    <div class="container">
-        <div class="keuntungan">
-            <h2>Keuntungan</h2>
-            <ul>
-                <li>Pelajaran berkualitas dari para ahli</li>
-                <li>Akses ke materi yang kaya dan terstruktur</li>
-                <li>Interaksi dengan komunitas pembelajaran</li>
-                <li>Peningkatan keterampilan dan pengetahuan</li>
-            </ul>
-        </div>
-
-        <div class="voucher">
-            <h2>Voucher Belajar Gratis</h2>
-            <p class=>Gunakan kode voucher <span class=></span> Bertanya saat webinar berlangsung akan mendapatkan Voucher Belajar untuk penanya beruntung</p>
-        </div>
+    <div class="center-content">
+        <h1><?= $deskwebinar[0]['judul'] ?></h1>
+    
+    <div style="text-align: center;">
+        <img src="img/webinar 1.jpg" alt="Deskripsi Gambar">
     </div>
+    
+    <div class="deskripsi">
+        <h2>Deskripsi</h2>
+        <ul>
+        <p><?= $deskwebinar[0]['deskwebinar']?></p>
+        </ul>
+    </div>
+
+    <h1>pemateri</h1>
+    <div class="pemateri">
+        <img src="img/Foto pemateri webinar 1.jpg" alt="Foto Pemateri">
+        <span class="nama-pemateri"><?= $deskwebinar[0]['namapemateri']?></span>
+    </div>
+    <div class="container">
 
     <div class="center-content">
         <!-- Konten lainnya -->

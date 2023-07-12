@@ -6,9 +6,8 @@
             <div class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.1s">
                 <div class="overflow-hidden">
                     <img class="img-fluid w-100 h-100" src="img/webinar 3.jpg" alt="">
-                    <h5 class="post-title"><a href="#"> <?= $deskwebinar->judul ?> </a></h5>
                 </div>
-                  <a href="#" class="btn btn-primary btn-lg d-block" type="button">Read more <i class="fa fa-arrow-right"></i></a>
+                  <a class="btn btn-primary btn-lg d-block" type="button" href="<?= '/detail/'.$deskwebinar->id ?>">Read more <i class="fa fa-arrow-right"></i></a>
             </div>
             <?php } ?>
         </div>
