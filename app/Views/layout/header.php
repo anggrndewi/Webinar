@@ -31,6 +31,6 @@
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="background-image: 'lampung cerdas.webp';">
     <div class="container-fluid">
-        <img class="navbar-brand" src="img/lampung cerdas.webp" alt="logo" width="100">
+        <img class="navbar-brand" src="<?= base_url().'/img/lampung cerdas.webp' ?>" alt="logo" width="100">
     </div>
     </nav>

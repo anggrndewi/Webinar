@@ -30,13 +30,17 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/home', 'Customer::home/$1');
-$routes->get('/sertifikat', 'Admin::index/$1');
-$routes->get('/pendaftaran', 'Customer::pendaftaran');
+$routes->get('/pendaftaran/(:num)', 'Customer::pendaftaran/$1');
 $routes->post('/created', 'Customer::created');
 $routes->get('/presensi', 'Customer::presensi');
 $routes->post('/input', 'Customer::storepresensi');
-$routes->get('/deskripsi', 'Customer::hasil');
+$routes->post('/daftar', 'Customer::storependaftaran');
+$routes->get('/detail/(:any)', 'Customer::detailwebinar/$1');
+$routes->get('/notifikasi', 'Customer::notifikasi/$1');
 
+// Route Admin
+$routes->get('/datapendaftar', 'Admin::index/$1');
+$routes->get('/dashboard', 'Admin::dashboard');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

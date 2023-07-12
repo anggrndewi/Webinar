@@ -1,6 +1,7 @@
 <?php namespace App\Controllers;
 
 use \App\Models\pendaftaranmodel;
+use \App\Models\webinarModel;
 use \App\Models\presensiModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\Controller;
@@ -14,16 +15,50 @@ class Customer extends BaseController
         
         $data['deskwebinar'] = $query;
 
-        echo view('layout/header');
-        echo View ('Home', $data);
+        echo view('layout/header', $data);
+        echo View ('Home');
         echo View('layout/footer');
     }
 
-    public function pendaftaran()
+    public function detailwebinar($id=NULL)
+    {
+        $deskwebinar = new webinarModel();
+        
+        $data = ['deskwebinar' => $deskwebinar->WHERE('id', $id)->find()];
+
+        echo view('layout/header', $data);
+        echo View('deskripsi');
+        echo View('layout/footer');  
+
+    }
+
+    public function lihat()
     {
         echo view('layout/header');
-        echo View('pendaftaranwebinar');
+        echo View('lihat');
+        echo View('layout/footer');  
+    }
+
+    public function pendaftaran($id)
+    {
+        $data = ['id' => $id];
+        echo view('layout/header');
+        echo View('pendaftaranwebinar', $data);
         echo View('layout/footer');
+    }
+
+    public function storependaftaran()
+    {
+        $pendaftaran = new pendaftaranmodel();
+            $data = [
+                'id_webinar'=> $this->request->getPost('id_webinar'),
+                'nama' => $this->request->getPost('nama'),
+                'email' => $this->request->getPost('email'),
+                'nowa' => $this->request->getPost('nowa'),
+                'alamat' => $this->request->getPost('alamat'),
+            ];
+            $pendaftaran->save($data);
+            return redirect()->back()->with('message', 'Berhasil Submit Data!');
     }
 
     public function presensi()
@@ -54,14 +89,25 @@ class Customer extends BaseController
         }
     }
 
-        public function hasil()
+    public function notifikasi($daftar = NULL)
     {
+        if($daftar == NULL || $daftar == 0){
+            $data = [
+                'judul' => 'Pendaftaran Gagal',
+                'deskripsi' => 'Mohon maaf pendaftaran anda gagal, mohon diulangi kembali.' 
+            ];
+        }else{
+            $data = [
+                'judul' => 'Pendaftaran Berhasil',
+                'deskripsi' => 'Selamat, pendaftaran anda berhasil.<br>
+                                Silahkan cek email atau whatsapp yang anda daftarkan untuk melihat data webinar.<br>
+                                Terimakasih' 
+            ];
+        }
         echo view('layout/header');
-        echo View('deskripsi');
+        echo View('notifikasi',$data);
         echo View('layout/footer');  
-
     }
-    
 }
 
 ?>

@@ -11,7 +11,7 @@ class presensiModel extends Model
 
     protected $useAutoIncrement = true;
 
-    protected $allowedFields = ['name', 'email', 'nowa', 'alamat', 'bukti'];
+    protected $allowedFields = ['nama', 'email', 'nowa', 'alamat', 'bukti'];
 
     // Dates
     protected $useTimestamps = false;

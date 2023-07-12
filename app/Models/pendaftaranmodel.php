@@ -14,7 +14,7 @@ class pendaftaranmodel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['name', 'email', 'nowa', 'alamat'];
+    protected $allowedFields = ['id_webinar', 'nama', 'email', 'nowa', 'alamat'];
 
     // Dates
     protected $useTimestamps = false;
