@@ -6,6 +6,8 @@
     <div class="container">
         <h2>Deskripsi</h2>
         <p><?= $deskwebinar[0]['deskwebinar']?></p>
+        <h2>Tangal</h2>
+        <p><?= $deskwebinar[0]['waktu']?></p>
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="mb-4">Pemateri</h1>
@@ -18,7 +20,9 @@
                 </div>
             </div>
             <div class="button-container">
-                <a href="<?= base_url(); ?>/join"><button class="btn btn-primary" onclick="openNewPage()">Join Sekarang</button> </a>
+            <?php foreach($deskwebinar as $deskwebinar) { ?>
+                <a href="<?= '/pendaftaran/'.$deskwebinar['id'] ?>"><button class="btn btn-primary" onclick="openNewPage()">Join Sekarang</button> </a>
+                <?php } ?>
             </div>
         </div>
     </div>

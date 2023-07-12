@@ -39,10 +39,11 @@ class Customer extends BaseController
         echo View('layout/footer');  
     }
 
-    public function pendaftaran()
+    public function pendaftaran($id)
     {
+        $data = ['id' => $id];
         echo view('layout/header');
-        echo View('pendaftaranwebinar');
+        echo View('pendaftaranwebinar', $data);
         echo View('layout/footer');
     }
 
@@ -50,6 +51,7 @@ class Customer extends BaseController
     {
         $pendaftaran = new pendaftaranmodel();
             $data = [
+                'id_webinar'=> $this->request->getPost('id_webinar'),
                 'nama' => $this->request->getPost('nama'),
                 'email' => $this->request->getPost('email'),
                 'nowa' => $this->request->getPost('nowa'),
@@ -106,8 +108,6 @@ class Customer extends BaseController
         echo View('notifikasi',$data);
         echo View('layout/footer');  
     }
-
-    
 }
 
 ?>

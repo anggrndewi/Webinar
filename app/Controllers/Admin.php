@@ -17,6 +17,11 @@ class Admin extends BaseController
         echo View('tampildatacustomer', $data);
     }
 
+    public function dashboard()
+    {
+        echo View('dashboard');
+    }
+
 }
 
 ?>
