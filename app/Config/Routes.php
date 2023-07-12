@@ -35,7 +35,12 @@ $routes->get('/pendaftaran', 'Customer::pendaftaran');
 $routes->post('/created', 'Customer::created');
 $routes->get('/presensi', 'Customer::presensi');
 $routes->post('/input', 'Customer::storepresensi');
+<<<<<<< HEAD
 $routes->get('/deskripsi/(:any)', 'Customer::desk/$1');
+=======
+$routes->get('/deskripsi', 'Customer::hasil');
+$routes->get('/notifikasi', 'Customer::notifikasi/$1');
+>>>>>>> dc0b642cf04dc91cad2af0602c33be68ef744c35
 
 /*
  * --------------------------------------------------------------------

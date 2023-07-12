@@ -67,6 +67,7 @@ in SYSTEMPATH\Database\BaseConnection.php on line 427.
  6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
 INFO - 2023-07-12 02:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
 CRITICAL - 2023-07-12 02:52:27 --> Object of class stdClass could not be converted to string
 in APPPATH\Views\Home.php on line 11.
  1 SYSTEMPATH\View\View.php(224): include()
@@ -122,3 +123,107 @@ in APPPATH\Views\Home.php on line 11.
  7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+=======
+ERROR - 2023-07-12 02:37:55 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sertifikat' in C:\laragon\www\webinar\Webinar\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\webinar\Webinar\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'sertifikat', 3306, '', 0)
+#1 C:\laragon\www\webinar\Webinar\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\webinar\Webinar\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\webinar\Webinar\app\Controllers\Customer.php(13): CodeIgniter\Database\BaseConnection->query('SELECT * FROM w...')
+#4 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(932): App\Controllers\Customer->home('$1')
+#5 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customer))
+#6 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\webinar\Webinar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\laragon\www\webinar\Webinar\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sertifikat' in C:\laragon\www\webinar\Webinar\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\webinar\Webinar\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\webinar\Webinar\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\webinar\Webinar\app\Controllers\Customer.php(13): CodeIgniter\Database\BaseConnection->query('SELECT * FROM w...')
+#3 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(932): App\Controllers\Customer->home('$1')
+#4 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customer))
+#5 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\webinar\Webinar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#7 C:\laragon\www\webinar\Webinar\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#8 {main}
+CRITICAL - 2023-07-12 02:37:55 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sertifikat'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Customer.php(13): CodeIgniter\Database\BaseConnection->query('SELECT * FROM webinar')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Customer->home('$1')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customer))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\webinar\\Webinar\\public\\index.php')
+ERROR - 2023-07-12 02:39:07 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sertifikat' in C:\laragon\www\webinar\Webinar\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\webinar\Webinar\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'sertifikat', 3306, '', 0)
+#1 C:\laragon\www\webinar\Webinar\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\webinar\Webinar\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\webinar\Webinar\app\Controllers\Customer.php(13): CodeIgniter\Database\BaseConnection->query('SELECT * FROM w...')
+#4 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(932): App\Controllers\Customer->home('$1')
+#5 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customer))
+#6 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\webinar\Webinar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\laragon\www\webinar\Webinar\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sertifikat' in C:\laragon\www\webinar\Webinar\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\webinar\Webinar\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\webinar\Webinar\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\webinar\Webinar\app\Controllers\Customer.php(13): CodeIgniter\Database\BaseConnection->query('SELECT * FROM w...')
+#3 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(932): App\Controllers\Customer->home('$1')
+#4 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customer))
+#5 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\webinar\Webinar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#7 C:\laragon\www\webinar\Webinar\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#8 {main}
+CRITICAL - 2023-07-12 02:39:07 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sertifikat'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Customer.php(13): CodeIgniter\Database\BaseConnection->query('SELECT * FROM webinar')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Customer->home('$1')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customer))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\webinar\\Webinar\\public\\index.php')
+ERROR - 2023-07-12 02:39:09 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sertifikat' in C:\laragon\www\webinar\Webinar\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\webinar\Webinar\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'sertifikat', 3306, '', 0)
+#1 C:\laragon\www\webinar\Webinar\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\webinar\Webinar\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\webinar\Webinar\app\Controllers\Customer.php(13): CodeIgniter\Database\BaseConnection->query('SELECT * FROM w...')
+#4 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(932): App\Controllers\Customer->home('$1')
+#5 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customer))
+#6 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\webinar\Webinar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\laragon\www\webinar\Webinar\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sertifikat' in C:\laragon\www\webinar\Webinar\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\webinar\Webinar\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\webinar\Webinar\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\webinar\Webinar\app\Controllers\Customer.php(13): CodeIgniter\Database\BaseConnection->query('SELECT * FROM w...')
+#3 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(932): App\Controllers\Customer->home('$1')
+#4 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customer))
+#5 C:\laragon\www\webinar\Webinar\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\webinar\Webinar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#7 C:\laragon\www\webinar\Webinar\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#8 {main}
+CRITICAL - 2023-07-12 02:39:09 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sertifikat'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Customer.php(13): CodeIgniter\Database\BaseConnection->query('SELECT * FROM webinar')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Customer->home('$1')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customer))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\webinar\\Webinar\\public\\index.php')
+>>>>>>> dc0b642cf04dc91cad2af0602c33be68ef744c35
