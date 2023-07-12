@@ -65,16 +65,6 @@ class Customer extends BaseController
             return redirect()->back()->with('message', 'Berhasil Submit Data!');
         }
     }
-<<<<<<< HEAD
-=======
-
-    public function hasil()
-    {
-        echo view('layout/header');
-        echo View('deskripsi');
-        echo View('layout/footer');  
-
-    }
 
     public function notifikasi($daftar = NULL)
     {
@@ -95,7 +85,7 @@ class Customer extends BaseController
         echo View('notifikasi',$data);
         echo View('layout/footer');  
     }
->>>>>>> dc0b642cf04dc91cad2af0602c33be68ef744c35
+
     
 }
 
