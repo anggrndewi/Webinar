@@ -5,7 +5,7 @@ use \App\Models\presensiModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\Controller;
 
-class Sertifikat extends BaseController
+class Customer extends BaseController
 {
     public function home()
     {
