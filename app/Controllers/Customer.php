@@ -5,7 +5,7 @@ use \App\Models\presensiModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\Controller;
 
-class Sertifikat extends BaseController
+class Customer extends BaseController
 {
     public function home()
     {
@@ -17,15 +17,6 @@ class Sertifikat extends BaseController
         echo view('layout/header');
         echo View ('Home', $data);
         echo View('layout/footer');
-    }
-
-    public function index()
-    {
-        $db = db_connect();
-        $query =$db->query('SELECT * FROM pendaftaran')->getResult();
-        
-        $data['tampildata'] = $query;
-        echo View('tampildatacustomer', $data);
     }
 
     public function pendaftaran()
@@ -61,6 +52,7 @@ class Sertifikat extends BaseController
             $presensi->save($data);
             return redirect()->back()->with('message', 'Berhasil Submit Data!');
         }
+<<<<<<< HEAD:app/Controllers/Sertifikat.php
     }
 
         public function hasil()
@@ -69,6 +61,8 @@ class Sertifikat extends BaseController
         echo View('deskripsi');
         echo View('layout/footer');  
 
+=======
+>>>>>>> e0892adc58246a14f1d543bbf314cbd7bb5dcc50:app/Controllers/Customer.php
     }
     
 }

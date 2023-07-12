@@ -383,13 +383,18 @@ in APPPATH\Controllers\Sertifikat.php on line 67.
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
 INFO - 2023-07-11 09:43:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
 CRITICAL - 2023-07-11 09:49:14 --> syntax error, unexpected token "<<", expecting end of file
+=======
+CRITICAL - 2023-07-11 09:49:35 --> syntax error, unexpected token "<<", expecting end of file
+>>>>>>> e0892adc58246a14f1d543bbf314cbd7bb5dcc50
 in APPPATH\Config\Routes.php on line 37.
  1 SYSTEMPATH\CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
  2 SYSTEMPATH\CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
  3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+<<<<<<< HEAD
 CRITICAL - 2023-07-11 09:49:27 --> syntax error, unexpected token "<<", expecting end of file
 in APPPATH\Config\Routes.php on line 37.
  1 SYSTEMPATH\CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
@@ -424,3 +429,5 @@ in APPPATH\Controllers\Sertifikat.php on line 45.
  6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+=======
+>>>>>>> e0892adc58246a14f1d543bbf314cbd7bb5dcc50

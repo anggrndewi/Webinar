@@ -29,6 +29,7 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+<<<<<<< HEAD
 $routes->get('/home', 'Sertifikat::home/$1');
 $routes->get('/sertifikat', 'Sertifikat::index/$1');
 $routes->get('/pendaftaran', 'Sertifikat::pendaftaran');
@@ -36,6 +37,15 @@ $routes->post('/created', 'Sertifikat::created');
 $routes->get('/presensi', 'Sertifikat::presensi');
 $routes->post('/input', 'Sertifikat::storepresensi');
 $routes->get('/deskripsi', 'Sertifikat::hasil');
+=======
+$routes->get('/home', 'Customer::home/$1');
+$routes->get('/sertifikat', 'Admin::index/$1');
+$routes->get('/pendaftaran', 'Customer::pendaftaran');
+$routes->post('/created', 'Customer::created');
+$routes->get('/presensi', 'Customer::presensi');
+$routes->post('/input', 'Customer::storepresensi');
+$routes->get('/desksripsi', 'Customer::hasil');
+>>>>>>> e0892adc58246a14f1d543bbf314cbd7bb5dcc50
 
 /*
  * --------------------------------------------------------------------
