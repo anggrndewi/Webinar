@@ -1,6 +1,7 @@
 <?php namespace App\Controllers;
 
 use \App\Models\pendaftaranmodel;
+use \App\Models\webinarModel;
 use \App\Models\presensiModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\Controller;
@@ -17,6 +18,17 @@ class Customer extends BaseController
         echo view('layout/header');
         echo View ('Home', $data);
         echo View('layout/footer');
+    }
+
+    public function hasil()
+    {
+        $desk = new webinarModel();
+        $data = ['desk' => $desk->findAll()];
+
+        echo view('layout/header');
+        echo View('deskripsi');
+        echo View('layout/footer');  
+
     }
 
     public function pendaftaran()
@@ -52,14 +64,6 @@ class Customer extends BaseController
             $presensi->save($data);
             return redirect()->back()->with('message', 'Berhasil Submit Data!');
         }
-    }
-
-        public function hasil()
-    {
-        echo view('layout/header');
-        echo View('deskripsi');
-        echo View('layout/footer');  
-
     }
     
 }
