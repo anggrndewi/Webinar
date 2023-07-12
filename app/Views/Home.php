@@ -8,10 +8,10 @@
                     <img class="img-fluid w-100 h-100" src="img/webinar 3.jpg" alt="">
                     <h5 class="post-title"><a href="#"> <?= $deskwebinar->judul ?> </a></h5>
                 </div>
-                <div class="d-flex align-items-center justify-content-between bg-light p-4">
-                  <button class="btn btn-primary btn-lg d-block" type="button">Read more</button>
-                  <a class="btn btn-square btn-outline-primary border-2 border-white flex-shrink-0" href="deskripsi.html"><i class="fa fa-arrow-right"></i></a>
-                </div>
+                
+                  <a href="#" class="btn btn-primary btn-lg d-block" type="button">Read more <i class="fa fa-arrow-right"></i></a>
+    
+              
             </div>
             <?php } ?>
         </div>
