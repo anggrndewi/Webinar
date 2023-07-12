@@ -58,7 +58,7 @@ class Customer extends BaseController
                 'alamat' => $this->request->getPost('alamat'),
             ];
             $pendaftaran->save($data);
-            return redirect()->back()->with('message', 'Berhasil Submit Data!');
+            return redirect()->to('/home')->with('message', 'Berhasil Submit Data!');
     }
 
     public function presensi()
