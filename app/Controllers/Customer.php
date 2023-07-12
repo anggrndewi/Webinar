@@ -54,12 +54,32 @@ class Customer extends BaseController
         }
     }
 
-        public function hasil()
+    public function hasil()
     {
         echo view('layout/header');
         echo View('deskripsi');
         echo View('layout/footer');  
 
+    }
+
+    public function notifikasi($daftar = NULL)
+    {
+        if($daftar == NULL || $daftar == 0){
+            $data = [
+                'judul' => 'Pendaftaran Gagal',
+                'deskripsi' => 'Mohon maaf pendaftaran anda gagal, mohon diulangi kembali.' 
+            ];
+        }else{
+            $data = [
+                'judul' => 'Pendaftaran Berhasil',
+                'deskripsi' => 'Selamat, pendaftaran anda berhasil.<br>
+                                Silahkan cek email atau whatsapp yang anda daftarkan untuk melihat data webinar.<br>
+                                Terimakasih' 
+            ];
+        }
+        echo view('layout/header');
+        echo View('notifikasi',$data);
+        echo View('layout/footer');  
     }
     
 }
