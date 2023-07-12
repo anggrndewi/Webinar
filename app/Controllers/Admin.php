@@ -21,6 +21,10 @@ class Admin extends BaseController
     {
         echo View('dashboard');
     }
+    public function login()
+    {
+        echo View('login');
+    }
 
 }
 

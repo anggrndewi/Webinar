@@ -41,6 +41,7 @@ $routes->get('/notifikasi', 'Customer::notifikasi/$1');
 // Route Admin
 $routes->get('/datapendaftar', 'Admin::index/$1');
 $routes->get('/dashboard', 'Admin::dashboard');
+$routes->get('/login', 'Admin::login');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
