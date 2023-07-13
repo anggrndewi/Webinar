@@ -90,6 +90,11 @@ class Admin extends BaseController
         echo View('dataWebinar');
         echo View('admin/footer');
     }  
+    public function tambahdata()
+    {
+        echo View('tambahdata');
+        
+    }
 
 }
 

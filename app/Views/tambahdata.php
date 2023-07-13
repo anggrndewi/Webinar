@@ -108,17 +108,27 @@
           <!-- Webinar Title -->
           <div class="form-group">
             <label for="webinarTitle">Title</label>
-            <input type="text" class="form-control" id="webinarTitle" placeholder="Enter webinar title" required>
+            <input type="text" class="form-control" id="webinarTitle" name="judul " placeholder="Enter webinar title" required>
           </div>
           <!-- Webinar Date -->
           <div class="form-group">
             <label for="webinarDate">Date</label>
-            <input type="date" class="form-control" id="webinarDate" required>
+            <input type="date" class="form-control" id="webinarDate" name="waktu" required>
           </div>
-          <!-- Webinar Time -->
+           <!-- Deskripsi Webinar -->
           <div class="form-group">
-            <label for="webinarTime">Time</label>
-            <input type="time" class="form-control" id="webinarTime" required>
+            <label for="deskwebinar">Deskripsi webinar</label>
+            <input type="deskwebinar" class="form-control" id="deskwebinar" name="deskwebinar" required>
+          </div>
+          <!-- Nama Pemateri -->
+          <div class="form-group">
+            <label for="namapemateri">Nama Pemateri</label>
+            <input type="namapemateri" class="form-control" id="namapemateri" name="namapemateri" required>
+          </div>
+          <!-- Deskripsi Pemateri -->
+          <div class="form-group">
+            <label for="deskpemateri">Nama Pemateri</label>
+            <input type="deskpemateri" class="form-control" id="deskpemateri" name="deskpemateri" required>
           </div>
           <!-- Submit Button -->
           <button type="submit" class="btn btn-primary">Add Webinar</button>
