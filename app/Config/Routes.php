@@ -51,6 +51,8 @@ $routes->get('/datapeserta/(:num)', 'Admin::datapeserta/$1');
 $routes->get('/datapresensi', 'Admin::datapresensi/$1');
 $routes->get('/tambahdata', 'Admin::tambahdata');
 $routes->post('/tambahdata', 'Admin::storetambahdata');
+$routes->get('/datanotifikasi', 'Admin::datanotifikasi');
+$routes->post('/datanotifikasi', 'Admin::storetdatanotifikasi');
 
 /*
  * --------------------------------------------------------------------
