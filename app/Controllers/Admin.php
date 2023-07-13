@@ -85,11 +85,33 @@ class Admin extends BaseController
         
         $data['tampildata'] = $query;
 
-        echo View('admin/side');
+        echo View('admin/side', $data);
         echo View('admin/topbar');
-        echo View('dataWebinar');
+        echo View('dataWebinar', $data);
         echo View('admin/footer');
     }  
+
+    public function datapeserta($id_webinar=NULL)
+    {
+        $datapeserta = new pendaftaranmodel();
+        $data = ['datapeserta' => $datapeserta->WHERE('id_webinar', $id_webinar)->find()];
+
+        echo View('admin/side');
+        echo View('admin/topbar');
+        echo View('datapeserta',$data);
+        echo View('admin/footer');
+    }
+
+    public function datapresensi($id_webinar=NULL)
+    {
+        $datapresensi = new presensiModel();
+        $data = ['datapresensi' => $datapresensi->WHERE('id_webinar', $id_webinar)->find()];
+
+        echo View('admin/side');
+        echo View('admin/topbar');
+        echo View('datapresensi',$data);
+        echo View('admin/footer');
+    }
 
 }
 
