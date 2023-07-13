@@ -93,8 +93,11 @@ class Admin extends BaseController
     }  
     public function tambahdata()
     {
-        echo View('tambahdata');
         
+        echo View('admin/side');
+        echo View('admin/topbar');
+        echo View('tambahdata');
+        echo View('admin/footer');
     }
     public function storetambahdata()
     {
