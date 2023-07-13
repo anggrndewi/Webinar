@@ -68,8 +68,15 @@ class Admin extends BaseController
 
     public function datawebinar()
     {
-        echo View('dataWebinar');
-    }
+        $db = db_connect();
+        $query =$db->query('SELECT * FROM webinar')->getResult();
+        
+        $data['tampildata'] = $query;
+
+        echo View('dataWebinar', $data);
+    }  
+
+
 
 
 }

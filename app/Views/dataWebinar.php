@@ -97,31 +97,29 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">No</th>
                     <th scope="col">Judul</th>
-                    <th scope="col">Tanggal</th>
                     <th scope="col">Waktu</th>
+                    <th scope="col">Deskripsi</th>
+                    <th scope="col">Nama Pemateri</th>
+                    <th scope="col">Deskripsi Pemateri</th>
                   </tr>
                 </thead>
                 <tbody>
+                <?php
+                  $nomor = 0;
+                  foreach($tampildata as $row):
+                      $nomor++;
+                ?>
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Webinar 1</td>
-                    <td>2023-07-15</td>
-                    <td>10:00 AM</td>
+                  <th><?= $nomor; ?></th>
+                  <td><?=$row->judul ?></td>
+                  <td><?=$row->waktu ?></td>
+                  <td><?=$row->deskwebinar ?></td>
+                  <td><?=$row->namapemateri ?></td>
+                  <td><?=$row->deskpemateri ?></td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Webinar 2</td>
-                    <td>2023-07-20</td>
-                    <td>2:30 PM</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Webinar 3</td>
-                    <td>2023-07-25</td>
-                    <td>9:00 AM</td>
-                  </tr>
+                  <?php endforeach ?>
                 </tbody>
               </table>
             </div>
