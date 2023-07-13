@@ -418,3 +418,43 @@ in APPPATH\Controllers\Admin.php on line 39.
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
 >>>>>>> 5ba9fac457f1f9081e6c7722bb26ef6fd9c2046d
+CRITICAL - 2023-07-13 04:26:50 --> Class "App\Models\adminModel" not found
+in APPPATH\Controllers\Admin.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->actlogin()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-13 04:27:43 --> Call to undefined function App\Controllers\redirec()
+in APPPATH\Controllers\Admin.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-13 04:27:49 --> Call to undefined function App\Controllers\redirec()
+in APPPATH\Controllers\Admin.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-13 04:27:50 --> Call to undefined function App\Controllers\redirec()
+in APPPATH\Controllers\Admin.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->login()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-13 04:36:55 --> Undefined property: stdClass::$nama
+in APPPATH\Views\tampildatacustomer.php on line 30.
+ 1 APPPATH\Views\tampildatacustomer.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama', 'D:\\xampp\\htdocs\\Webinar\\app\\Views\\tampildatacustomer.php', 30)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\Webinar\\app\\Views\\tampildatacustomer.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('tampildatacustomer', [], true)
+ 5 APPPATH\Controllers\Customer.php(43): view('tampildatacustomer')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Customer->lihat('$1')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customer))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')

@@ -37,6 +37,7 @@ $routes->post('/input', 'Customer::storepresensi');
 $routes->post('/daftar', 'Customer::storependaftaran');
 $routes->get('/detail/(:any)', 'Customer::detailwebinar/$1');
 $routes->get('/notifikasi', 'Customer::notifikasi/$1');
+$routes->get('/lihat', 'Customer::lihat/$1');
 
 // Route Admin
 $routes->get('/datapendaftar', 'Admin::index/$1');

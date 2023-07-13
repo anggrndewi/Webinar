@@ -34,9 +34,14 @@ class Customer extends BaseController
 
     public function lihat()
     {
-        echo view('layout/header');
-        echo View('lihat');
-        echo View('layout/footer');  
+        $db = db_connect();
+        $query =$db->query('SELECT * FROM pendaftaran')->getResult();
+        
+        $data['tampildata'] = $query;
+
+        echo view('layout/header', $data);
+        echo View ('tampildatacustomer');
+        echo View('layout/footer'); 
     }
 
     public function pendaftaran($id)

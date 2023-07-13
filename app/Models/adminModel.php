@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class pendaftaranmodel extends Model
+class adminModel extends Model
 {
     protected $table      = 'admin';
     protected $primaryKey = 'id';

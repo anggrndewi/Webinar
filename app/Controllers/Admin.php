@@ -26,7 +26,7 @@ class Admin extends BaseController
     {
         $session = session();
         if ($session->get('login')) {
-            return redirec()->to('/')->with('message', 'Berhasil Login');
+            return redirect()->to('/dashboard')->with('message', 'Berhasil Login');
         }
         else{
             echo View('login');
