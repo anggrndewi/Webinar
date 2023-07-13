@@ -20,6 +20,12 @@
                         <div class="col-12 col-sm-6">
                             <input required type="hidden" class="form-control border-0"style="height: 55px;" value="<?= $id?>" name="id_webinar">
                         </div>
+
+                        <?php
+                        if (session()->getFlashdata('message')) {
+                            echo "<div class='alert alert-warning'><marquee>".session()->getFlashdata('message')."</marquee></div>";
+                        }
+                    ?>
                         <div class="col-12">
                             <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
                         </div>
