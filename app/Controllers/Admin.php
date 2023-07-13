@@ -3,6 +3,7 @@
 use \App\Models\pendaftaranmodel;
 use \App\Models\presensiModel;
 use \App\Models\adminModel;
+use App\Models\webinarModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\Controller;
 
@@ -90,6 +91,57 @@ class Admin extends BaseController
         echo View('dataWebinar', $data);
         echo View('admin/footer');
     }  
+    public function tambahdata()
+    {
+        echo View('tambahdata');
+        
+    }
+    public function storetambahdata()
+    {
+        $tambahdata = new webinarModel();
+        $imgposter = $this->request->getFile('poster');
+        $imgsertifikat = $this->request->getFile('sertifikat');
+        if (!$imgposter->hasMoved() and !$imgsertifikat->hasMoved()) {
+            $newNamep = $imgposter->getRandomName();
+            $newNames = $imgsertifikat->getRandomName();
+            $filepath = ROOTPATH.'public/assets/img/webinar/';
+            $imgposter->move($filepath,$newNamep);
+            $imgsertifikat->move($filepath,$newNames);
+            $data = [
+                'judul'=> $this->request->getPost('judul'),
+                'waktu' => $this->request->getPost('waktu'),
+                'deskwebinar' => $this->request->getPost('deskwebinar'),
+                'namapemateri' => $this->request->getPost('namapemateri'),
+                'deskpemateri' => $this->request->getPost('deskpemateri'),
+                'poster' => $newNamep,
+                'sertifikat' => $newNames,
+            ];
+            $tambahdata->save($data);
+            return redirect()->to('/home')->with('message', 'Berhasil Submit Data!');
+        }
+    }
+
+    public function storepresensi()
+    {
+        $presensi = new presensiModel();
+        $img = $this->request->getFile('bukti');
+        // dd($img);
+        if (!$img->hasMoved()) {
+            $newName = $img->getRandomName();
+            $filepath = ROOTPATH.'public/assets/img/presensi/';
+            $img->move($filepath,$newName);
+            $data = [
+                'nama' => $this->request->getPost('nama'),
+                'email' => $this->request->getPost('email'),
+                'nowa' => $this->request->getPost('nowa'),
+                'alamat' => $this->request->getPost('alamat'),
+                'bukti' => $newName,
+            ];
+            $presensi->save($data);
+            return redirect()->back()->with('message', 'Berhasil Submit Data!');
+        }
+    }
+    
 
     public function datapeserta($id_webinar=NULL)
     {
