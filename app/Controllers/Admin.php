@@ -2,6 +2,7 @@
 
 use \App\Models\pendaftaranmodel;
 use \App\Models\presensiModel;
+use \App\Models\adminModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\Controller;
 
@@ -23,13 +24,50 @@ class Admin extends BaseController
     }
     public function login()
     {
-        echo View('login');
+        $session = session();
+        if ($session->get('login')) {
+            return redirec()->to('/')->with('message', 'Berhasil Login');
+        }
+        else{
+            echo View('login');
+        }
+        
     }
+    
+    public function actlogin()
+    {
+        $admin = new adminModel();
+        $session = session();
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+        $vrf = [
+            'email' => $email,
+            'password' => $password,
+        ];
+       
+        $cekemail = $admin->where($vrf)->find();
+        
+         if($cekemail!=NULL){
+             $data = [
+                 'nama' => $cekemail[0]['nama'],
+                 'email' => $cekemail[0]['email'],
+                 'login' => TRUE
+             ];
+             $session->set($data);
+             return redirect()->to('/dashboard')->with('message', 'Berhasil Masuk!');
+           
+         }else{
+             return redirect()->back()->with('message', 'Gagal Masuk!');
+         }
+    }
+<<<<<<< HEAD
     public function table()
     {
         echo View('table');
     }
 
+=======
+>>>>>>> 5ba9fac457f1f9081e6c7722bb26ef6fd9c2046d
 }
 
 ?>
