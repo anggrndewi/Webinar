@@ -60,14 +60,13 @@ class Admin extends BaseController
              return redirect()->back()->with('message', 'Gagal Masuk!');
          }
     }
-<<<<<<< HEAD
+
     public function table()
     {
         echo View('table');
     }
 
-=======
->>>>>>> 5ba9fac457f1f9081e6c7722bb26ef6fd9c2046d
+
 }
 
 ?>
