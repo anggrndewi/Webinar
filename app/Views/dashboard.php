@@ -53,7 +53,7 @@
 
       <!-- Nav Item - Data Webinar -->
       <li class="nav-item">
-        <a class="nav-link" href="data-webinar.html">
+        <a class="nav-link" href="/datawebinar">
           <i class="fas fa-fw fa-calendar"></i>
           <span>Data Webinar</span></a>
       </li>

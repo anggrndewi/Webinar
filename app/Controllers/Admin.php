@@ -66,6 +66,11 @@ class Admin extends BaseController
         echo View('table');
     }
 
+    public function datawebinar()
+    {
+        echo View('dataWebinar');
+    }
+
 
 }
 
