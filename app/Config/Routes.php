@@ -47,6 +47,7 @@ $routes->get('/table', 'Admin::table');
 $routes->post('/inputlogin', 'Admin::actlogin');
 $routes->get('/datawebinar', 'Admin::datawebinar');
 $routes->get('/tambahdata', 'Admin::tambahdata');
+$routes->post('/tambahdata', 'Admin::storetambahdata');
 
 /*
  * --------------------------------------------------------------------
