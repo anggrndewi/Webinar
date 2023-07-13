@@ -20,8 +20,12 @@ class Admin extends BaseController
 
     public function dashboard()
     {
+        echo View('admin/side');
+        echo View('admin/topbar');
         echo View('dashboard');
+        echo View('admin/footer');
     }
+
     public function login()
     {
         $session = session();
@@ -61,6 +65,13 @@ class Admin extends BaseController
          }
     }
 
+    public function logout(){
+        $session = session();
+        $session->stop();
+        $session->destroy();
+        return redirect()->to('/login')->with('message', 'Berhasil Keluar!');
+    }
+
     public function table()
     {
         echo View('table');
@@ -68,9 +79,11 @@ class Admin extends BaseController
 
     public function datawebinar()
     {
+        echo View('admin/side');
+        echo View('admin/topbar');
         echo View('dataWebinar');
+        echo View('admin/footer');
     }
-
 
 }
 
