@@ -11,9 +11,6 @@ class pendaftaranmodel extends Model
 
     protected $useAutoIncrement = true;
 
-    protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
-
     protected $allowedFields = ['id_webinar', 'nama', 'email', 'nowa', 'alamat'];
 
     // Dates
