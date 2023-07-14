@@ -310,3 +310,77 @@ in APPPATH\Config\Routes.php on line 53.
  3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+ERROR - 2023-07-14 03:41:39 --> mysqli_sql_exception: Unknown column 'id_webinar' in 'where clause' in D:\xampp\htdocs\Webinar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\Webinar\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\Webinar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\Webinar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\Webinar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Webinar\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Webinar\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\xampp\htdocs\Webinar\app\Controllers\Admin.php(201): CodeIgniter\BaseModel->find()
+#7 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(932): App\Controllers\Admin->datanotifikasi()
+#8 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Webinar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Webinar\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-07-14 03:41:39 --> Unknown column 'id_webinar' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `notifikasi`
+WHERE `id_webinar` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `notifikasi`
+WHERE `id_webinar` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `notifikasi`
+WHERE `id_webinar` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `notifikasi`
+WHERE `id_webinar` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Controllers\Admin.php(201): CodeIgniter\BaseModel->find()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->datanotifikasi()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+ERROR - 2023-07-14 04:00:23 --> mysqli_sql_exception: Unknown column 'id_webinar' in 'where clause' in D:\xampp\htdocs\Webinar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\Webinar\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\Webinar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\Webinar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\Webinar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Webinar\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Webinar\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\xampp\htdocs\Webinar\app\Controllers\Admin.php(201): CodeIgniter\BaseModel->find()
+#7 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(932): App\Controllers\Admin->datanotifikasi()
+#8 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Webinar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Webinar\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-07-14 04:00:23 --> Unknown column 'id_webinar' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `notifikasi`
+WHERE `id_webinar` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `notifikasi`
+WHERE `id_webinar` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `notifikasi`
+WHERE `id_webinar` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `notifikasi`
+WHERE `id_webinar` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Controllers\Admin.php(201): CodeIgniter\BaseModel->find()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->datanotifikasi()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
