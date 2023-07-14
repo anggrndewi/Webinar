@@ -203,7 +203,7 @@ class Admin extends BaseController
         echo View('datanotifikasi',$data);
         echo View('admin/footer');
     }
-
-}
+    
+} 
 
 ?>
