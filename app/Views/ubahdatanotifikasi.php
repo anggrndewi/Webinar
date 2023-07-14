@@ -4,26 +4,25 @@
   <!-- Page Heading -->
   <h1 class="h3 mb-4 text-gray-800">Ubah Data Notifikasi</h1>
 
-        <!-- Content Row -->
-        <div class="row">
-          <div class="col-lg-12">
-          <div class="form-group">
-          <label for="browser" class="form-label">Pilih Webinar</label>
-          <select class="form-control" aria-label="Default select example" name="id_webinar">
-            <option selected>Pilih Webinar</option>
-            <?php 
-                $db = db_connect();
-                $query =$db->query('UPDATE * FROM webinar')->getResult();
-                foreach ($query as $ubahdata){
-              ?>
-            <option value="<?= $ubahdata->id ?>"><?= $ubahdata->judul ?></option>
-            <?php }?>
-          </select>
-          </div>
+       
 
-            <!-- Form -->
-            <form>
-        <form method="POST" action="/ubahdata" enctype="multipart/form-data">
+        <form method="POST" action="/ubahdatanotifikasi" enctype="multipart/form-data">
+             <!-- Content Row -->
+        <div class="row">
+            <div class="col-lg-12">
+            <div class="form-group">
+            <label for="browser" class="form-label">Pilih Webinar</label>
+            <select class="form-control" aria-label="Default select example" name="id_webinar">
+                <option selected>Pilih Webinar</option>
+                <?php 
+                    $db = db_connect();
+                    $query =$db->query('SELECT * FROM webinar')->getResult();
+                    foreach ($query as $ubahdata){
+                ?>
+                <option value="<?=$data[0]['id']?>"><?= $ubahdata->judul ?></option>
+                <?php }?>
+            </select>
+          </div>
           <!-- Webinar id -->
           <div class="form-group">
             <input type="hidden" class="form-control" name="id" id="webinarTitle" value="<?=$data[0]['id']?>" required>

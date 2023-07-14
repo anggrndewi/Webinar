@@ -493,3 +493,104 @@ in APPPATH\Views\datanotifikasi.php on line 35.
  6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+ERROR - 2023-07-14 04:50:11 --> mysqli_sql_exception: Unknown column 'id_webinar' in 'where clause' in D:\xampp\htdocs\Webinar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\Webinar\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\Webinar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\Webinar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\Webinar\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\Webinar\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\Webinar\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\xampp\htdocs\Webinar\app\Controllers\Admin.php(201): CodeIgniter\BaseModel->find()
+#7 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(932): App\Controllers\Admin->datanotifikasi('1')
+#8 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\Webinar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\Webinar\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-07-14 04:50:11 --> Unknown column 'id_webinar' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `notifikasi`
+WHERE `id_webinar` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `notifikasi`
+WHERE `id_webinar` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `notifikasi`
+WHERE `id_webinar` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `notifikasi`
+WHERE `id_webinar` = :id_webinar:', [...], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Controllers\Admin.php(201): CodeIgniter\BaseModel->find()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->datanotifikasi('1')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+ERROR - 2023-07-14 04:51:32 --> mysqli_sql_exception: Unknown column 'linkpresensi' in 'field list' in D:\xampp\htdocs\Webinar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\Webinar\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `no...', 0)
+#1 D:\xampp\htdocs\Webinar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `no...')
+#2 D:\xampp\htdocs\Webinar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `no...')
+#3 D:\xampp\htdocs\Webinar\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `no...', Array, false)
+#4 D:\xampp\htdocs\Webinar\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\Webinar\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\htdocs\Webinar\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\xampp\htdocs\Webinar\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\xampp\htdocs\Webinar\app\Controllers\Admin.php(226): CodeIgniter\BaseModel->save(Array)
+#9 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(932): App\Controllers\Admin->storetambahdatanotifikasi()
+#10 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\Webinar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\Webinar\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-07-14 04:51:32 --> Unknown column 'linkpresensi' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `notifikasi` (`id_webinar`, `linkwebinar`, `linkpresensi`, `pesan`) VALUES (\'3\', \'zoom\', \'ada\', \'ada\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `notifikasi` (`id_webinar`, `linkwebinar`, `linkpresensi`, `pesan`) VALUES (\'3\', \'zoom\', \'ada\', \'ada\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `notifikasi` (`id_webinar`, `linkwebinar`, `linkpresensi`, `pesan`) VALUES (\'3\', \'zoom\', \'ada\', \'ada\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `notifikasi` (`id_webinar`, `linkwebinar`, `linkpresensi`, `pesan`) VALUES (:id_webinar:, :linkwebinar:, :linkpresensi:, :pesan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(226): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->storetambahdatanotifikasi()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+ERROR - 2023-07-14 04:54:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROM webinar' at line 1 in D:\xampp\htdocs\Webinar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\Webinar\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE * FROM w...', 0)
+#1 D:\xampp\htdocs\Webinar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE * FROM w...')
+#2 D:\xampp\htdocs\Webinar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE * FROM w...')
+#3 D:\xampp\htdocs\Webinar\app\Views\ubahdatanotifikasi.php(16): CodeIgniter\Database\BaseConnection->query('UPDATE * FROM w...')
+#4 D:\xampp\htdocs\Webinar\system\View\View.php(224): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\Webinar\system\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\xampp\htdocs\Webinar\system\Common.php(1180): CodeIgniter\View\View->render('ubahdatanotifik...', Array, true)
+#7 D:\xampp\htdocs\Webinar\app\Controllers\Admin.php(239): view('ubahdatanotifik...')
+#8 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(932): App\Controllers\Admin->ubahdatanotifikasi('1')
+#9 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\Webinar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\Webinar\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-07-14 04:54:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROM webinar' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE * FROM webinar', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE * FROM webinar')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE * FROM webinar')
+ 4 APPPATH\Views\ubahdatanotifikasi.php(16): CodeIgniter\Database\BaseConnection->query('UPDATE * FROM webinar')
+ 5 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\Webinar\\app\\Views\\ubahdatanotifikasi.php')
+ 6 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('ubahdatanotifikasi', [], true)
+ 8 APPPATH\Controllers\Admin.php(239): view('ubahdatanotifikasi')
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->ubahdatanotifikasi('1')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')

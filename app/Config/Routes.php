@@ -69,8 +69,8 @@ $routes->post('/tambahdatanotifikasi', 'Admin::storetambahdatanotifikasi');
 $routes->get('/email', 'Email::send');
 
 
-$routes->get('/ubahdatanotifikasi/(:num)', 'Admin::ubahdata/$1');
-$routes->post('/ubahdata', 'Admin::ubahdatastore');
+$routes->get('/ubahdatanotifikasi/(:num)', 'Admin::ubahdatanotifikasi/$1');
+$routes->post('/ubahdatanotifikasi', 'Admin::ubahdatastorenotifikasi');
 $routes->get('/hapusdata/(:num)', 'Admin::hapusdatanotifikasi/$1');
 
 /*
