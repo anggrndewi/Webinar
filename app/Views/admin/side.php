@@ -38,7 +38,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="/datawebinar">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -88,7 +88,7 @@
 
       <!-- Nav Item - Data Presensi -->
       <li class="nav-item dropdown no-arrow">
-        <a class="nav-link" href="/datapresensi">
+        <a class="nav-link dropdown-toggle" href="/datapresensi" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-check-circle"></i>
           <span>Data Presensi</span></a>
 
@@ -117,23 +117,30 @@
 
       <!-- Nav Item - Data Notifikasi -->
       <li class="nav-item">
-        <a class="nav-link" href="data-notifikasi.html">
+        <a class="nav-link" href="/datanotifikasi" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-bell"></i>
           <span>Data Notifikasi</span></a>
+
+           <!-- Dropdown - User Information -->
+        <div class="dropdown-menu dropdown-menu-bottom shadow animated--grow-in" aria-labelledby="userDropdown">
+          <?php 
+            $db = db_connect();
+            $query =$db->query('SELECT * FROM webinar')->getResult();
+            foreach ($query as $tampildata){
+          ?>
+          <a class="dropdown-item" href="<?= '/datanotifikasi/'.$tampildata->id ?>">
+            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+            <?= $tampildata->judul ?>
+            <?php }?>
+          </a>
+        </div>
       </li>
 
       <!-- Nav Item - Tambah Data Notifikasi -->
       <li class="nav-item">
-        <a class="nav-link" href="tambah-data-notifikasi.html">
+        <a class="nav-link" href="/tambahdatanotifikasi">
           <i class="fas fa-fw fa-plus"></i>
           <span>Tambah Data Notifikasi</span></a>
-      </li>
-
-      <!-- Nav Item - Ubah Data Notifikasi -->
-      <li class="nav-item">
-        <a class="nav-link" href="ubah-data-notifikasi.html">
-          <i class="fas fa-fw fa-edit"></i>
-          <span>Ubah Data Notifikasi</span></a>
       </li>
 
     </ul>

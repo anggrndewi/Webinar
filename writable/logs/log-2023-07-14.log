@@ -222,3 +222,84 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
 =======
 >>>>>>> 8b3e9da8304149e1664e5bf2da7d4a7ba0d1d5f7
 >>>>>>> 6469668d58d4babb95b92bb6ec3af71d2d87ff81
+ERROR - 2023-07-14 02:51:37 --> mysqli_sql_exception: Unknown column 'linkpresensi' in 'field list' in D:\xampp\htdocs\Webinar\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xampp\htdocs\Webinar\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `no...', 0)
+#1 D:\xampp\htdocs\Webinar\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `no...')
+#2 D:\xampp\htdocs\Webinar\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `no...')
+#3 D:\xampp\htdocs\Webinar\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `no...', Array, false)
+#4 D:\xampp\htdocs\Webinar\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\Webinar\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\htdocs\Webinar\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\xampp\htdocs\Webinar\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\xampp\htdocs\Webinar\app\Controllers\Admin.php(225): CodeIgniter\BaseModel->save(Array)
+#9 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(932): App\Controllers\Admin->storetambahdatanotifikasi()
+#10 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 D:\xampp\htdocs\Webinar\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\Webinar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\Webinar\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-07-14 02:51:37 --> Unknown column 'linkpresensi' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `notifikasi` (`linkwebinar`, `linkpresensi`, `pesan`) VALUES (\'http\', \'http\', \'Berikut Link Webinar dan Link Presensi\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `notifikasi` (`linkwebinar`, `linkpresensi`, `pesan`) VALUES (\'http\', \'http\', \'Berikut Link Webinar dan Link Presensi\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `notifikasi` (`linkwebinar`, `linkpresensi`, `pesan`) VALUES (\'http\', \'http\', \'Berikut Link Webinar dan Link Presensi\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `notifikasi` (`linkwebinar`, `linkpresensi`, `pesan`) VALUES (:linkwebinar:, :linkpresensi:, :pesan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin.php(225): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->storetambahdatanotifikasi()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-14 02:59:42 --> Undefined variable $tampildata
+in APPPATH\Views\datanotifikasi.php on line 21.
+ 1 APPPATH\Views\datanotifikasi.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tampildata', 'D:\\xampp\\htdocs\\Webinar\\app\\Views\\datanotifikasi.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\Webinar\\app\\Views\\datanotifikasi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('datanotifikasi', [], true)
+ 5 APPPATH\Controllers\Admin.php(205): view('datanotifikasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->datanotifikasi()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-14 03:12:09 --> Attempt to read property "linkwebinar" on array
+in APPPATH\Views\datanotifikasi.php on line 26.
+ 1 APPPATH\Views\datanotifikasi.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "linkwebinar" on array', 'D:\\xampp\\htdocs\\Webinar\\app\\Views\\datanotifikasi.php', 26)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\Webinar\\app\\Views\\datanotifikasi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('datanotifikasi', [], true)
+ 5 APPPATH\Controllers\Admin.php(205): view('datanotifikasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->datanotifikasi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-14 03:13:14 --> Undefined array key "linkwebinar"
+in APPPATH\Views\datanotifikasi.php on line 26.
+ 1 APPPATH\Views\datanotifikasi.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "linkwebinar"', 'D:\\xampp\\htdocs\\Webinar\\app\\Views\\datanotifikasi.php', 26)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\Webinar\\app\\Views\\datanotifikasi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('datanotifikasi', [], true)
+ 5 APPPATH\Controllers\Admin.php(205): view('datanotifikasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->datanotifikasi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-14 03:15:46 --> Attempt to read property "linkwebinar" on array
+in APPPATH\Views\datanotifikasi.php on line 26.
+ 1 APPPATH\Views\datanotifikasi.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "linkwebinar" on array', 'D:\\xampp\\htdocs\\Webinar\\app\\Views\\datanotifikasi.php', 26)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\Webinar\\app\\Views\\datanotifikasi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('datanotifikasi', [], true)
+ 5 APPPATH\Controllers\Admin.php(205): view('datanotifikasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->datanotifikasi('2')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
