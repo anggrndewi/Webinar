@@ -4,6 +4,7 @@ use \App\Models\pendaftaranmodel;
 use \App\Models\presensiModel;
 use \App\Models\adminModel;
 use App\Models\webinarModel;
+use App\Models\notifikasiModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\Controller;
 
@@ -124,7 +125,7 @@ class Admin extends BaseController
         }
     }
 
-    public function ubahdata($id)
+    public function ubahdatawebinar($id)
     {
         $session = session();
         $webinar = new webinarModel();
@@ -133,10 +134,10 @@ class Admin extends BaseController
         ];
         echo view('admin/side',$data);
         echo view('admin/topbar');
-        echo view('ubahdata');
+        echo view('ubahdatawebinar');
         echo view('admin/footer');
     }
-    public function ubahdatastore()
+    public function ubahdatastorewebinar()
     {
         $session = session();
         $ubahwebinar = new webinarModel();
@@ -153,10 +154,10 @@ class Admin extends BaseController
         if($update){
             return redirect()->to('/datawebinar')->with('message', 'Update Berhasil!');
         }else{
-            return redirect()->to('ubahdata')->with('message', 'Update Gagal!');
+            return redirect()->to('ubahdatawebinar')->with('message', 'Update Gagal!');
         }
             $ubahwebinar->save($data);
-            return redirect()->to('/dashboard')->with('message', 'Berhasil Submit Data!');
+            return redirect()->to('/datawebinar')->with('message', 'Berhasil Submit Data!');
         
     }
 
@@ -193,10 +194,11 @@ class Admin extends BaseController
         echo View('datapresensi',$data);
         echo View('admin/footer');
     }
+
     public function datanotifikasi($id_webinar=NULL)
     {
-        $datapeserta = new pendaftaranmodel();
-        $data = ['datapeserta' => $datapeserta->WHERE('id_webinar', $id_webinar)->find()];
+        $datanotifikasi = new notifikasiModel();
+        $data = ['datanotifikasi' => $datanotifikasi->WHERE('id_webinar', $id_webinar)->find()];
 
         echo View('admin/side');
         echo View('admin/topbar');
@@ -204,6 +206,26 @@ class Admin extends BaseController
         echo View('admin/footer');
     }
 
+    public function tambahdatanotifikasi()
+    {
+        echo View('admin/side');
+        echo View('admin/topbar');
+        echo View('tambahdatanotifikasi');
+        echo View('admin/footer');
+    }
+    
+    public function storetambahdatanotifikasi()
+    {
+        $tambahdata = new notifikasiModel();
+            $data = [
+                'linkwebinar'=> $this->request->getPost('linkwebinar'),
+                'linkpresensi' => $this->request->getPost('linkpresensi'),
+                'pesan' => $this->request->getPost('pesan'),
+            ];
+            $tambahdata->save($data);
+            return redirect()->to('/datanotifikasi')->with('message', 'Berhasil Submit Data!');
+        
+    }
 }
 
 ?>

@@ -7,26 +7,26 @@
     <!-- Form -->
     <div class="row">
       <div class="col-lg-12">
-        <form method="POST" action="/tambahdata" enctype="multipart/form-data">
-          <!-- Webinar Title -->
+        <form method="POST" action="/tambahdatanotifikasi" enctype="multipart/form-data">
+          <!-- Pilih Webinar  -->
           <div class="form-group">
-            <label for="webinarTitle">Nama</label>
-            <input type="text" class="form-control" id="webinarTitle" name="nama" placeholder="Enter webinar title" required>
+            <label for="link webinar">Piilih Webinar</label>
+            <input type="text" class="form-control" id="linkwebinar" name="pilihwebinar" required>
           </div>
-          <!-- Webinar Date -->
+          <!-- Link Webinar  -->
           <div class="form-group">
-            <label for="webinarDate">Link Webinar</label>
-            <input type="text" class="form-control" id="webinarDate" name="linkwebinar" required>
+            <label for="link webinar">Link Webinar</label>
+            <input type="text" class="form-control" id="linkwebinar" name="linkwebinar" required>
           </div>
-           <!-- Deskripsi Webinar -->
+           <!-- Link Presensi -->
           <div class="form-group">
             <label for="deskwebinar">Link Presensi</label>
-            <input type="text" class="form-control" id="deskwebinar" name="linkpresensi" required>
+            <input type="text" class="form-control" id="linkpresensi" name="linkpresensi" required>
           </div>
-          <!-- Nama Pemateri -->
+          <!-- Pesan -->
           <div class="form-group">
             <label for="pesan">Pesan</label>
-            <input type="text" class="form-control" id="namapemateri" name="pesan" required>
+            <input type="text" class="form-control" id="pesan" name="pesan" required>
           </div>
          
           <!-- Submit Button -->
