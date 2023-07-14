@@ -227,6 +227,41 @@ class Admin extends BaseController
             return redirect()->to('/datanotifikasi')->with('message', 'Berhasil Submit Data!');
         
     }
+    public function ubahdatanotifikasi($id)
+    {
+        $session = session();
+        $webinar = new notifikasiModel();
+        $data = [
+            'data' => $webinar->where('id',$id)->find()
+        ];
+        echo view('admin/side',$data);
+        echo view('admin/topbar');
+        echo view('ubahdatanotifikasi');
+        echo view('admin/footer');
+    }
+    public function ubahdatastorenotifikasi()
+    {
+        $session = session();
+        $ubahnotifikasi = new notifikasiModel();
+            $data = [
+                
+                'linkwebinar' => $this->request->getPost('linkwebinar'),
+                'linkpresensi' => $this->request->getPost('linkpresensi'),
+                'pesan' => $this->request->getPost('pesan'),
+               
+            ];
+        $id = $this->request->getPost('id');
+        $update = $ubahnotifikasi->update($id, $data);
+        if($update){
+            return redirect()->to('/datanotifikasi')->with('message', 'Update Berhasil!');
+        }else{
+            return redirect()->to('ubahdatanotifikasi')->with('message', 'Update Gagal!');
+        }
+            $ubahnotifikasi->save($data);
+            return redirect()->to('/datanotifikasi')->with('message', 'Berhasil Submit Data!');
+        
+    }
+    
 }
 
 
