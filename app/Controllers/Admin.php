@@ -260,6 +260,18 @@ class Admin extends BaseController
             $ubahnotifikasi->save($data);
             return redirect()->to('/datanotifikasi')->with('message', 'Berhasil Submit Data!');
     }
+
+    public function hapusdatanotifikasi($id)
+    {
+        $session = session();
+        $user = new notifikasiModel();
+        $data = $user->delete($id);
+        if($data){
+            return redirect()->back()->with('message', 'Berhasil Hapus data!');
+        }else{
+            return redirect()->back()->with('message', 'Gagal Hapus data!');
+        }
+    }
     
 }
 

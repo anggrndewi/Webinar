@@ -64,14 +64,14 @@ $routes->get('/hapusdatawebinar/(:num)', 'Admin::hapusdatawebinar/$1');
 $routes->get('/datanotifikasi/(:num)', 'Admin::datanotifikasi/$1');
 $routes->get('/tambahdatanotifikasi', 'Admin::tambahdatanotifikasi');
 $routes->post('/tambahdatanotifikasi', 'Admin::storetambahdatanotifikasi');
-
+$routes->get('/hapusdatanotifikasi/(:num)', 'Admin::hapusdatanotifikasi/$1');
 
 $routes->get('/email', 'Email::send');
 
 
 $routes->get('/ubahdatanotifikasi/(:num)', 'Admin::ubahdatanotifikasi/$1');
 $routes->post('/ubahdatanotifikasi', 'Admin::ubahdatastorenotifikasi');
-$routes->get('/hapusdata/(:num)', 'Admin::hapusdatanotifikasi/$1');
+
 
 /*
  * --------------------------------------------------------------------
