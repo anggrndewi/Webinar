@@ -60,7 +60,7 @@
 
       <!-- Nav Item - Tambah Data Webinar -->
       <li class="nav-item">
-        <a class="nav-link" href="/tambahdata">
+        <a class="nav-link" href="/tambahdatawebinar">
           <i class="fas fa-fw fa-plus"></i>
           <span>Tambah Data Webinar</span></a>
       </li>
@@ -87,7 +87,7 @@
       </li>     
 
       <!-- Nav Item - Data Presensi -->
-      <li class="nav-item">
+      <li class="nav-item dropdown no-arrow">
         <a class="nav-link" href="/datapresensi">
           <i class="fas fa-fw fa-check-circle"></i>
           <span>Data Presensi</span></a>

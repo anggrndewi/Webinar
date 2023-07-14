@@ -48,11 +48,11 @@ $routes->post('/inputlogin', 'Admin::actlogin');
 $routes->get('/datawebinar', 'Admin::datawebinar/$1');
 $routes->get('/datapeserta/(:num)', 'Admin::datapeserta/$1');
 $routes->get('/datapresensi', 'Admin::datapresensi/$1');
-$routes->get('/tambahdata', 'Admin::tambahdata');
-$routes->post('/tambahdata', 'Admin::storetambahdata');
+$routes->get('/tambahdatawebinar', 'Admin::tambahdatawebinar');
+$routes->post('/tambahdatawebinar', 'Admin::storetambahdatawebinar');
 $routes->get('/ubahdata/(:num)', 'Admin::ubahdata/$1');
 $routes->post('/ubahdata', 'Admin::ubahdatastore');
-$routes->post('/hapusdata/(:num)', 'Admin::hapusdatawebinar/$1');
+$routes->get('/hapusdata/(:num)', 'Admin::hapusdatawebinar/$1');
 $routes->get('/datanotifikasi', 'Admin::datanotifikasi');
 $routes->post('/datanotifikasi', 'Admin::storetdatanotifikasi');
 
