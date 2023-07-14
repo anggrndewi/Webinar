@@ -43,6 +43,7 @@ $routes->get('/lihat', 'Customer::lihat/$1');
 $routes->get('/datapendaftar', 'Admin::index/$1');
 $routes->get('/dashboard', 'Admin::dashboard');
 $routes->get('/login', 'Admin::login');
+$routes->get('/logout', 'Admin::logout');
 $routes->get('/table', 'Admin::table');
 $routes->post('/inputlogin', 'Admin::actlogin');
 $routes->get('/datawebinar', 'Admin::datawebinar/$1');
