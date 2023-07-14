@@ -7,6 +7,19 @@
         <!-- Content Row -->
         <div class="row">
           <div class="col-lg-12">
+          <div class="form-group">
+          <label for="browser" class="form-label">Pilih Webinar</label>
+          <select class="form-control" aria-label="Default select example" name="id_webinar">
+            <option selected>Pilih Webinar</option>
+            <?php 
+                $db = db_connect();
+                $query =$db->query('UPDATE * FROM webinar')->getResult();
+                foreach ($query as $ubahdata){
+              ?>
+            <option value="<?= $ubahdata->id ?>"><?= $ubahdata->judul ?></option>
+            <?php }?>
+          </select>
+          </div>
 
             <!-- Form -->
             <form>
