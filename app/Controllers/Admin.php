@@ -205,10 +205,9 @@ class Admin extends BaseController
         echo View('datanotifikasi',$data);
         echo View('admin/footer');
     }
-<<<<<<< HEAD
+
     
-} 
-=======
+
 
     public function tambahdatanotifikasi()
     {
@@ -231,6 +230,6 @@ class Admin extends BaseController
         
     }
 }
->>>>>>> d038621bb8fed6680800c7a7830804e1efb926e2
+
 
 ?>
