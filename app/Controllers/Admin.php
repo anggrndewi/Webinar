@@ -206,9 +206,6 @@ class Admin extends BaseController
         echo View('admin/footer');
     }
 
-    
-
-
     public function tambahdatanotifikasi()
     {
         echo View('admin/side');
@@ -221,6 +218,7 @@ class Admin extends BaseController
     {
         $tambahdata = new notifikasiModel();
             $data = [
+                'id_webinar' => $this->request->getPost('id_webinar'),
                 'linkwebinar'=> $this->request->getPost('linkwebinar'),
                 'linkpresensi' => $this->request->getPost('linkpresensi'),
                 'pesan' => $this->request->getPost('pesan'),
