@@ -9,7 +9,7 @@
       <div class="col-lg-12">
   
         <!-- Form -->
-        <form method="POST" action="/ubahdata" enctype="multipart/form-data">
+        <form method="POST" action="/ubahdatawebinar" enctype="multipart/form-data">
           <!-- Webinar id -->
           <div class="form-group">
             <input type="hidden" class="form-control" name="id" id="webinarTitle" value="<?=$data[0]['id']?>" required>
