@@ -6,15 +6,15 @@ use CodeIgniter\Controller;
 
 class Email extends BaseController
 {
-    public function send()
+    public function send($email, $isiemail)
     {
         $email = \Config\Services::email();
 
         $email->setFrom('webinar@lampungcerdas.com', 'Lampung Cerdas');
-        $email->setTo('anggrn26@gmail.com');
+        $email->setTo($email);
         
         $email->setSubject('Notifikasi Webinar Lampung Cerdas');
-        $email->setMessage('$isiemail');
+        $email->setMessage($isiemail);
 
         $email->send();
     }
