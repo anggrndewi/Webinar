@@ -91,15 +91,15 @@ class Admin extends BaseController
         echo View('dataWebinar', $data);
         echo View('admin/footer');
     }  
-    public function tambahdata()
+    public function tambahdatawebinar()
     {
         
         echo View('admin/side');
         echo View('admin/topbar');
-        echo View('tambahdata');
+        echo View('tambahdatawebinar');
         echo View('admin/footer');
     }
-    public function storetambahdata()
+    public function storetambahdatawebinar()
     {
         $tambahdata = new webinarModel();
         $imgposter = $this->request->getFile('poster');
