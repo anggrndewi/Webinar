@@ -2,7 +2,7 @@
   <div class="container-fluid">
   
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">Data Notifikasi</h1>
+    <h1 class="h3 mb-4 text-gray-800">Tambah data notifikasi</h1>
   
     <!-- Form -->
     <div class="row">
