@@ -2,7 +2,7 @@
   <div class="container-fluid">
   
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">Tambah Data Webinar</h1>
+    <h1 class="h3 mb-4 text-gray-800">Data Notifikasi</h1>
   
     <!-- Form -->
     <div class="row">
@@ -10,39 +10,27 @@
         <form method="POST" action="/tambahdata" enctype="multipart/form-data">
           <!-- Webinar Title -->
           <div class="form-group">
-            <label for="webinarTitle">Judul</label>
-            <input type="text" class="form-control" id="webinarTitle" name="judul" placeholder="Enter webinar title" required>
+            <label for="webinarTitle">Nama</label>
+            <input type="text" class="form-control" id="webinarTitle" name="nama" placeholder="Enter webinar title" required>
           </div>
           <!-- Webinar Date -->
           <div class="form-group">
-            <label for="webinarDate">Date</label>
-            <input type="date" class="form-control" id="webinarDate" name="waktu" required>
+            <label for="webinarDate">Link Webinar</label>
+            <input type="text" class="form-control" id="webinarDate" name="linkwebinar" required>
           </div>
            <!-- Deskripsi Webinar -->
           <div class="form-group">
-            <label for="deskwebinar">Deskripsi webinar</label>
-            <input type="text" class="form-control" id="deskwebinar" name="deskwebinar" required>
+            <label for="deskwebinar">Link Presensi</label>
+            <input type="text" class="form-control" id="deskwebinar" name="linkpresensi" required>
           </div>
           <!-- Nama Pemateri -->
           <div class="form-group">
-            <label for="namapemateri">Nama Pemateri</label>
-            <input type="text" class="form-control" id="namapemateri" name="namapemateri" required>
+            <label for="pesan">Pesan</label>
+            <input type="text" class="form-control" id="namapemateri" name="pesan" required>
           </div>
-          <!-- Deskripsi Pemateri -->
-          <div class="form-group">
-            <label for="deskpemateri">Deskripsi Pemateri</label>
-            <input type="text" class="form-control" id="deskpemateri" name="deskpemateri" required>
-          </div>
-          <div class="form-group">
-            <label for="deskpemateri">Poster</label>
-            <input type="file" class="form-control" id="deskpemateri" name="poster" required>
-          </div>
-          <div class="form-group">
-            <label for="deskpemateri">Sertifikat</label>
-            <input type="file" class="form-control" id="deskpemateri" name="sertifikat" required>
-          </div>
+         
           <!-- Submit Button -->
-          <button type="submit" class="btn btn-primary">Add Webinar</button>
+          <button type="submit" class="btn btn-primary">Add Notifikasi</button>
         </form>
       </div>
     </div>

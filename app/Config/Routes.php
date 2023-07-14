@@ -53,6 +53,8 @@ $routes->post('/tambahdata', 'Admin::storetambahdata');
 $routes->get('/ubahdata/(:num)', 'Admin::ubahdata/$1');
 $routes->post('/ubahdata', 'Admin::ubahdatastore');
 $routes->post('/hapusdata/(:num)', 'Admin::hapusdatawebinar/$1');
+$routes->get('/datanotifikasi', 'Admin::datanotifikasi');
+$routes->post('/datanotifikasi', 'Admin::storetdatanotifikasi');
 
 /*
  * --------------------------------------------------------------------

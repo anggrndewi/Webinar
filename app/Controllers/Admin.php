@@ -193,6 +193,16 @@ class Admin extends BaseController
         echo View('datapresensi',$data);
         echo View('admin/footer');
     }
+    public function datanotifikasi($id_webinar=NULL)
+    {
+        $datapeserta = new pendaftaranmodel();
+        $data = ['datapeserta' => $datapeserta->WHERE('id_webinar', $id_webinar)->find()];
+
+        echo View('admin/side');
+        echo View('admin/topbar');
+        echo View('datanotifikasi',$data);
+        echo View('admin/footer');
+    }
 
 }
 
