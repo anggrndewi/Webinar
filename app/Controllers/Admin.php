@@ -259,7 +259,6 @@ class Admin extends BaseController
         }
             $ubahnotifikasi->save($data);
             return redirect()->to('/datanotifikasi')->with('message', 'Berhasil Submit Data!');
-        
     }
     
 }
