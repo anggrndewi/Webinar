@@ -54,7 +54,7 @@ $routes->post('/tambahdatawebinar', 'Admin::storetambahdatawebinar');
 $routes->get('/ubahdata/(:num)', 'Admin::ubahdata/$1');
 $routes->post('/ubahdata', 'Admin::ubahdatastore');
 $routes->get('/hapusdata/(:num)', 'Admin::hapusdatawebinar/$1');
-$routes->get('/datanotifikasi/(:num)', 'Admin::datanotifikasi/$1');
+$routes->get('/datanotifikasi', 'Admin::datanotifikasi');
 $routes->post('/datanotifikasi', 'Admin::storetdatanotifikasi');
 $routes->get('/ubahdatanotifikasi/(:num)', 'Admin::ubahdata/$1');
 $routes->post('/ubahdata', 'Admin::ubahdatastore');
@@ -65,7 +65,9 @@ $routes->post('/ubahdatawebinar', 'Admin::ubahdatastorewebinar');
 $routes->get('/hapusdatawebinar/(:num)', 'Admin::hapusdatawebinar/$1');
 $routes->get('/datanotifikasi/(:num)', 'Admin::datanotifikasi/$1');
 $routes->get('/tambahdatanotifikasi', 'Admin::tambahdatanotifikasi');
-$routes->post('/tambahdatanotifikasi(:num)', 'Admin::storetambahdatanotifikasi/$1');
+$routes->post('/tambahdatanotifikasi', 'Admin::storetambahdatanotifikasi');
+
+$routes->get('/email', 'Email::send');
 
 
 /*
