@@ -11,5 +11,5 @@ class notifikasiModel extends Model
 
     protected $useAutoIncrement = true;
 
-    protected $allowedFields = ['linkpresensi', 'linkwebinar', 'pesan'];
+    protected $allowedFields = ['id_webinar', 'linkpresensi', 'linkwebinar', 'pesan'];
 }
