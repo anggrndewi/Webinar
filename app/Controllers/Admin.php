@@ -120,31 +120,57 @@ class Admin extends BaseController
                 'sertifikat' => $newNames,
             ];
             $tambahdata->save($data);
-            return redirect()->to('/home')->with('message', 'Berhasil Submit Data!');
+            return redirect()->to('/dashboard')->with('message', 'Berhasil Submit Data!');
         }
     }
 
-    public function storepresensi()
+    public function ubahdata($id)
     {
-        $presensi = new presensiModel();
-        $img = $this->request->getFile('bukti');
-        // dd($img);
-        if (!$img->hasMoved()) {
-            $newName = $img->getRandomName();
-            $filepath = ROOTPATH.'public/assets/img/presensi/';
-            $img->move($filepath,$newName);
+        $session = session();
+        $webinar = new webinarModel();
+        $data = [
+            'data' => $webinar->where('id',$id)->find()
+        ];
+        echo view('admin/side',$data);
+        echo view('admin/topbar');
+        echo view('ubahdata');
+        echo view('admin/footer');
+    }
+    public function ubahdatastore()
+    {
+        $session = session();
+        $ubahwebinar = new webinarModel();
             $data = [
-                'nama' => $this->request->getPost('nama'),
-                'email' => $this->request->getPost('email'),
-                'nowa' => $this->request->getPost('nowa'),
-                'alamat' => $this->request->getPost('alamat'),
-                'bukti' => $newName,
+                'judul'=> $this->request->getPost('judul'),
+                'waktu' => $this->request->getPost('waktu'),
+                'deskwebinar' => $this->request->getPost('deskwebinar'),
+                'namapemateri' => $this->request->getPost('namapemateri'),
+                'deskpemateri' => $this->request->getPost('deskpemateri'),
+               
             ];
-            $presensi->save($data);
-            return redirect()->back()->with('message', 'Berhasil Submit Data!');
+        $id = $this->request->getPost('id');
+        $update = $ubahwebinar->update($id, $data);
+        if($update){
+            return redirect()->to('/datawebinar')->with('message', 'Update Berhasil!');
+        }else{
+            return redirect()->to('ubahdata')->with('message', 'Update Gagal!');
+        }
+            $ubahwebinar->save($data);
+            return redirect()->to('/dashboard')->with('message', 'Berhasil Submit Data!');
+        
+    }
+
+    public function hapusdatawebinar($id)
+    {
+        $session = session();
+        $user = new webinarModel();
+        $data = $user->delete($id);
+        if($data){
+            return redirect()->back()->with('message', 'Berhasil Hapus data!');
+        }else{
+            return redirect()->back()->with('message', 'Gagal Hapus data!');
         }
     }
-    
 
     public function datapeserta($id_webinar=NULL)
     {

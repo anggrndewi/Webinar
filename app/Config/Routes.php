@@ -45,12 +45,14 @@ $routes->get('/dashboard', 'Admin::dashboard');
 $routes->get('/login', 'Admin::login');
 $routes->get('/table', 'Admin::table');
 $routes->post('/inputlogin', 'Admin::actlogin');
-
 $routes->get('/datawebinar', 'Admin::datawebinar/$1');
 $routes->get('/datapeserta/(:num)', 'Admin::datapeserta/$1');
 $routes->get('/datapresensi', 'Admin::datapresensi/$1');
 $routes->get('/tambahdata', 'Admin::tambahdata');
 $routes->post('/tambahdata', 'Admin::storetambahdata');
+$routes->get('/ubahdata/(:num)', 'Admin::ubahdata/$1');
+$routes->post('/ubahdata', 'Admin::ubahdatastore');
+$routes->post('/hapusdata/(:num)', 'Admin::hapusdatawebinar/$1');
 
 /*
  * --------------------------------------------------------------------

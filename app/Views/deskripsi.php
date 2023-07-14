@@ -1,7 +1,7 @@
 <div class="container-xxl py-5">
     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
         <h1 class="mb-5"><?= $deskwebinar[0]['judul'] ?></h1>
-        <img src="img/webinar 1.jpg" alt="Deskripsi Gambar">
+        <img src="<?= base_url().'assets/img/webinar/'.$deskwebinar[0]['poster']?>" alt="Deskripsi Gambar" width="600px">
     </div>
     <div class="container">
         <h2>Deskripsi</h2>

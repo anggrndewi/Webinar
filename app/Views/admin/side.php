@@ -65,13 +65,6 @@
           <span>Tambah Data Webinar</span></a>
       </li>
 
-      <!-- Nav Item - Ubah Data Webinar -->
-      <li class="nav-item">
-        <a class="nav-link" href="ubah-data-webinar.html">
-          <i class="fas fa-fw fa-edit"></i>
-          <span>Ubah Data Webinar</span></a>
-      </li>
-
       <!-- Nav Item - Data Peserta -->
       <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="/datapeserta" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
