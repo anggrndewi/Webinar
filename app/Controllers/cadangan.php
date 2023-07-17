@@ -75,8 +75,37 @@ class Customer extends BaseController
             $isiemail = $query->pesan."<br><br>Link Webinar = ".$query->linkwebinar."<br><br>Link Presensi = ".$query->linkpresensi;
             //dd($isiemail);
             $kirimemail->send($email, $isiemail);
-            return redirect()->to('/notifikasi')->with('message', 'Berhasil Submit Data!');
+            return redirect()->to('/home')->with('message', 'Berhasil Submit Data!');
     }
+
+    public function presensi()
+    {
+        echo view('layout/header');
+        echo View('prisensi');
+        echo View('layout/footer');
+    }
+
+    public function storepresensi()
+    {
+        $presensi = new presensiModel();
+        $img = $this->request->getFile('bukti');
+         dd($img);
+        if (!$img->hasMoved()) {
+            $newName = $img->getRandomName();
+            $filepath = ROOTPATH.'public/assets/img/presensi/';
+            $img->move($filepath,$newName);
+            $data = [
+                'nama' => $this->request->getPost('nama'),
+                'email' => $this->request->getPost('email'),
+                'nowa' => $this->request->getPost('nowa'),
+                'alamat' => $this->request->getPost('alamat'),
+                'bukti' => $newName,
+            ];
+            $presensi->save($data);
+            return redirect()->back()->with('message', 'Berhasil Submit Data!');
+        }
+    }
+
     public function notifikasi($daftar = NULL)
     {
         if($daftar == NULL || $daftar == 0){
@@ -95,53 +124,6 @@ class Customer extends BaseController
         echo view('layout/header');
         echo View('notifikasi',$data);
         echo View('layout/footer');  
-    }
-
-    public function presensi($id)
-    {
-        $data = ['id' => $id];
-        echo view('layout/header');
-        echo View('prisensi', $data);
-        echo View('layout/footer');
-    }
-
-    public function storepresensi()
-    {
-        $presensi = new presensiModel();
-            $data = [
-                'id_webinar'=> $this->request->getPost('id_webinar'),
-                'nama' => $this->request->getPost('nama'),
-                'email' => $this->request->getPost('email'),
-                'nowa' => $this->request->getPost('nowa'),
-                'alamat' => $this->request->getPost('alamat'),    
-            ];
-            $absen = $presensi->save($data);
-    //         return redirect()->to('/sertifikat')->with('message', 'Berhasil Submit Data!');
-    // }
-
-    // public function sertifikat($input = NULL)
-    // {
-        if(!$absen){
-            $data = [
-                'judul' => 'Presensi Gagal',
-                'deskripsi' => 'Mohon maaf Presensi anda gagal, mohon diulangi kembali.',
-
-            ];
-        }else{
-            $id_webinar= $this->request->getPost('id_webinar');
-            $db = db_connect();
-            $data = [
-                'judul' => 'Presensi Berhasil',
-                'deskripsi' => 'Selamat, Presensi anda berhasil.<br>
-                                Silahkan klik buttom yang anda dibawah  untuk mengunduh sertifikat.<br>
-                                Terimakasih',
-                'nama' => $this->request->getPost('nama'),
-                'foto' => $db->query("SELECT * FROM webinar WHERE id ='$id_webinar'")->getRow(),
-            ];
-        }
-        echo view('layout/header');
-        echo View('sertifikat',$data);
- 
     }
 }
 

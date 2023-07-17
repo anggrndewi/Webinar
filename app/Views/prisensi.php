@@ -19,7 +19,7 @@
                                 <input required type="text" class="form-control border-0" placeholder="Your Address" style="height: 55px;" name=" alamat">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input required type="file" class="form-control border-0" placeholder="Bukti Kehadiran" style="height: 55px;" name=" bukti">
+                            <input required type="hidden" class="form-control border-0"style="height: 55px;" value="<?= $id?>" name="id_webinar">
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
