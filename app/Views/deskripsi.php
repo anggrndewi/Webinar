@@ -5,9 +5,9 @@
     </div>
     
     <div class="container">
-    <h2 style="font-size: 22px;">Deskripsi</h2>
+    <h2 style="font-size: 20px;">Deskripsi</h2>
     <p><?= $deskwebinar[0]['deskwebinar']?></p>
-    <h2 style="font-size: 22px;">Waktu</h2>
+    <h2 style="font-size: 20px;">Waktu</h2>
     <p><?= $deskwebinar[0]['waktu']?></p>
     <div class="row g-5">
         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
