@@ -76,6 +76,9 @@ class Admin extends BaseController
 
     public function table()
     {
+        
+        echo View('admin/side');
+        echo View('admin/topbar');
         echo View('table');
     }
 

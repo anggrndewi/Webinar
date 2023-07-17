@@ -13,11 +13,11 @@
   <title>Lampung Cerdas - Dashboard</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="<?= base_url('vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="<?= base_url().'css/sb-admin-2.min.css'?>" rel="stylesheet">
+  <link href="<?= base_url('css/sb-admin-2.min.css')?>" rel="stylesheet">
   <link href="img/lampung cerdas.webp" rel="icon">
 
 </head>
@@ -40,7 +40,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="/datawebinar">
+        <a class="nav-link" href="/dashboard">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -68,46 +68,44 @@
       </li>
 
       <!-- Nav Item - Data Peserta -->
-      <li class="nav-item dropdown no-arrow">
-        <a class="nav-link dropdown-toggle" href="/datapeserta" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>  
-        <span>Data Peserta</span>
-        </a>
-        <!-- Dropdown - User Information -->
-        <div class="dropdown-menu dropdown-menu-bottom shadow animated--grow-in" aria-labelledby="userDropdown">
-          <?php 
-            $db = db_connect();
-            $query =$db->query('SELECT * FROM webinar')->getResult();
-            foreach ($query as $tampildata){
-          ?>
-          <a class="dropdown-item" href="<?= '/datapeserta/'.$tampildata->id ?>">
-            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400" ></i>
-            <?= $tampildata->judul ?>
-            <?php }?>
-          </a>
-        </div>
-      </li>     
+      <li class="nav-item">
+                <a class="nav-link collapsed" href="/datapeserta" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    <span>Data Peserta</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <?php 
+                          $db = db_connect();
+                          $query =$db->query('SELECT * FROM webinar')->getResult();
+                          foreach ($query as $tampildata){
+                        ?>
+                        <a class="collapse-item" href="<?= '/datapeserta/'.$tampildata->id ?>"><?= $tampildata->judul ?></a>
+                        <?php }?>
+                    </div>
+                </div>
+            </li>     
 
       <!-- Nav Item - Data Presensi -->
-      <li class="nav-item dropdown no-arrow">
-        <a class="nav-link dropdown-toggle" href="/datapresensi" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-check-circle"></i>
-          <span>Data Presensi</span></a>
-
-          <!-- Dropdown - User Information -->
-        <div class="dropdown-menu dropdown-menu-bottom shadow animated--grow-in" aria-labelledby="userDropdown">
-          <?php 
-            $db = db_connect();
-            $query =$db->query('SELECT * FROM webinar')->getResult();
-            foreach ($query as $tampildata){
-          ?>
-          <a class="dropdown-item" href="<?= '/datapresensi/'.$tampildata->id ?>">
-            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-            <?= $tampildata->judul ?>
-            <?php }?>
-          </a>
-        </div>
-      </li>
+       <li class="nav-item">
+                <a class="nav-link collapsed" href="/datapresensi" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    <span>Data Presensi</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <?php 
+                          $db = db_connect();
+                          $query =$db->query('SELECT * FROM webinar')->getResult();
+                          foreach ($query as $tampildata){
+                        ?>
+                        <a class="collapse-item" href="<?= '/datapresensi/'.$tampildata->id ?>"><?= $tampildata->judul ?></a>
+                        <?php }?>
+                    </div>
+                </div>
+            </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -119,24 +117,23 @@
 
       <!-- Nav Item - Data Notifikasi -->
       <li class="nav-item">
-        <a class="nav-link" href="/datanotifikasi" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-bell"></i>
-          <span>Data Notifikasi</span></a>
-
-           <!-- Dropdown - User Information -->
-        <div class="dropdown-menu dropdown-menu-bottom shadow animated--grow-in" aria-labelledby="userDropdown">
-          <?php 
-            $db = db_connect();
-            $query =$db->query('SELECT * FROM webinar')->getResult();
-            foreach ($query as $tampildata){
-          ?>
-          <a class="dropdown-item" href="<?= '/datanotifikasi/'.$tampildata->id ?>">
-            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-            <?= $tampildata->judul ?>
-            <?php }?>
-          </a>
-        </div>
-      </li>
+                <a class="nav-link collapsed" href="/datanotifikasi" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-bell"></i>
+                    <span>Data Notifikasi</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <?php 
+                          $db = db_connect();
+                          $query =$db->query('SELECT * FROM webinar')->getResult();
+                          foreach ($query as $tampildata){
+                        ?>
+                        <a class="collapse-item" href="<?= '/datanotifikasi/'.$tampildata->id ?>"><?= $tampildata->judul ?></a>
+                        <?php }?>
+                    </div>
+                </div>
+            </li>
 
       <!-- Nav Item - Tambah Data Notifikasi -->
       <li class="nav-item">
@@ -144,6 +141,13 @@
           <i class="fas fa-fw fa-plus"></i>
           <span>Tambah Data Notifikasi</span></a>
       </li>
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
 
     </ul>
     <!-- End of Sidebar -->

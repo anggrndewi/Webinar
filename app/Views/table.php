@@ -1,16 +1,14 @@
-<?php
-$session = session();
-?>
+
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Data Peserta</h1>
+    <h1 class="h3 mb-2 text-gray-800">Data Presensi Webinar</h1>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Berikut ini adalah data presensi peserta webinar.</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -36,7 +34,7 @@ $session = session();
                     <tbody>
                         <?php
                         $nomor = 0;
-                        foreach($datapeserta as $row):
+                        foreach($datapresensi as $row):
                             $nomor++;
                         ?>
                         <tr>

@@ -1,11 +1,14 @@
-        <!-- Begin Page Content -->
+<?php
+$session = session();
+?>
+ <!-- Begin Page Content -->
         <div class="container-fluid">
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Data Webinar</h1>
           <!-- Content Row -->
           <div class="row">
-            <div class="col-lg-12">
-              <table class="table">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
                     <th scope="col">No</th>
