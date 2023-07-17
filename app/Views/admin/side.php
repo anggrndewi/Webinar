@@ -141,6 +141,11 @@
           <i class="fas fa-fw fa-plus"></i>
           <span>Tambah Data Notifikasi</span></a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">
+          <i class="fas fa-fw fa-power-off"></i>
+          <span>logout</span></a>
+      </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
