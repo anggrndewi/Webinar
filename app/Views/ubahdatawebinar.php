@@ -1,3 +1,6 @@
+<?php
+$session = session();
+?>
   <!-- Begin Page Content -->
   <div class="container-fluid">
   

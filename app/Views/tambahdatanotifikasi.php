@@ -1,4 +1,7 @@
-  <!-- Begin Page Content -->
+<?php
+$session = session();
+?>
+ <!-- Begin Page Content -->
   <div class="container-fluid">
   
     <!-- Page Heading -->
