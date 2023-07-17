@@ -43,6 +43,7 @@ $routes->get('/lihat', 'Customer::lihat/$1');
 $routes->get('/datapendaftar', 'Admin::index/$1');
 $routes->get('/dashboard', 'Admin::dashboard');
 $routes->get('/login', 'Admin::login');
+$routes->get('/logout', 'Admin::logout');
 $routes->get('/table', 'Admin::table');
 $routes->post('/inputlogin', 'Admin::actlogin');
 $routes->get('/datawebinar', 'Admin::datawebinar/$1');
@@ -64,14 +65,14 @@ $routes->get('/hapusdatawebinar/(:num)', 'Admin::hapusdatawebinar/$1');
 $routes->get('/datanotifikasi/(:num)', 'Admin::datanotifikasi/$1');
 $routes->get('/tambahdatanotifikasi', 'Admin::tambahdatanotifikasi');
 $routes->post('/tambahdatanotifikasi', 'Admin::storetambahdatanotifikasi');
-
+$routes->get('/hapusdatanotifikasi/(:num)', 'Admin::hapusdatanotifikasi/$1');
 
 $routes->get('/email', 'Email::send');
 
 
 $routes->get('/ubahdatanotifikasi/(:num)', 'Admin::ubahdatanotifikasi/$1');
 $routes->post('/ubahdatanotifikasi', 'Admin::ubahdatastorenotifikasi');
-$routes->get('/hapusdata/(:num)', 'Admin::hapusdatanotifikasi/$1');
+
 
 /*
  * --------------------------------------------------------------------

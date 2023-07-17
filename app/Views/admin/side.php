@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  
 
   <title>Lampung Cerdas - Dashboard</title>
 
@@ -17,6 +18,7 @@
 
   <!-- Custom styles for this template-->
   <link href="<?= base_url().'css/sb-admin-2.min.css'?>" rel="stylesheet">
+  <link href="img/lampung cerdas.webp" rel="icon">
 
 </head>
 

@@ -2,6 +2,11 @@
         <div class="container-fluid">
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Data Notifikasi</h1>
+          <?php
+              if (session()->getFlashdata('message')) {
+                  echo "<div class='alert alert-success'><marquee>".session()->getFlashdata('message')."</marquee></div>";
+              }
+          ?>
           <!-- Content Row -->
           <div class="row">
             <div class="col-lg-12">

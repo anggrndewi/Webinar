@@ -3,6 +3,7 @@
 use \App\Models\pendaftaranmodel;
 use \App\Models\webinarModel;
 use \App\Models\presensiModel;
+use \App\Controllers\Email;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\Controller;
 
@@ -62,7 +63,18 @@ class Customer extends BaseController
                 'nowa' => $this->request->getPost('nowa'),
                 'alamat' => $this->request->getPost('alamat'),
             ];
+            $id_webinar=$this->request->getPost('id_webinar');
+            $email=$this->request->getPost('email');
             $pendaftaran->save($data);
+            
+            $db = db_connect();
+            $query =$db->query("SELECT * FROM notifikasi WHERE id_webinar='$id_webinar'")->getRow();
+            
+            //dd($email);
+            $kirimemail = new Email();
+            $isiemail = $query->pesan."<br><br>Link Webinar = ".$query->linkwebinar."<br><br>Link Presensi = ".$query->linkpresensi;
+            //dd($isiemail);
+            $kirimemail->send($email, $isiemail);
             return redirect()->to('/home')->with('message', 'Berhasil Submit Data!');
     }
 
@@ -77,7 +89,7 @@ class Customer extends BaseController
     {
         $presensi = new presensiModel();
         $img = $this->request->getFile('bukti');
-        // dd($img);
+         dd($img);
         if (!$img->hasMoved()) {
             $newName = $img->getRandomName();
             $filepath = ROOTPATH.'public/assets/img/presensi/';

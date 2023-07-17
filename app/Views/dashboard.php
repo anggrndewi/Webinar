@@ -1,10 +1,13 @@
+  <?php
+    $session = session();
+  ?>
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
           <!-- Page Heading -->
           <?php
               if (session()->getFlashdata('message')) {
-                  echo "<div class='alert alert-warning'><marquee>".session()->getFlashdata('message')."</marquee></div>";
+                  echo "<div class='alert alert-success'><marquee>".session()->getFlashdata('message')."</marquee></div>";
               }
           ?>
           <h1 class="h3 mb-4 text-gray-800">Ubah Data Notifikasi</h1>
