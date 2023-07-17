@@ -80,7 +80,7 @@
     <script src="<?= base_url('js/main.js') ?>"></script>
     <script type="text/javascript">
     function generatePDF() {
-        var nama = <?php echo $nama ?>;
+        var nama = "<?php echo $nama ?>";
     
         // Membuat instance jsPDF baru dengan orientasi lanskap
         var doc = new jsPDF('landscape');
@@ -88,7 +88,7 @@
         // Menambahkan logo
         var logo = new Image();
         logo.crossOrigin = "Anonymous";
-        logo.src = <?= base_url().'assets/img/webinar/'.$foto->sertifikat?>; // Ganti dengan path file logo di proyek Anda
+        logo.src = "<?= base_url().'assets/img/webinar/'.$foto->sertifikat?>"; // Ganti dengan path file logo di proyek Anda
     
         // Menunggu logo selesai dimuat sebelum menggambar di PDF
         logo.onload = function() {
