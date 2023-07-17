@@ -32,11 +32,13 @@ $routes->set404Override();
 $routes->get('/home', 'Customer::home/$1');
 $routes->get('/pendaftaran/(:num)', 'Customer::pendaftaran/$1');
 $routes->post('/created', 'Customer::created');
-$routes->get('/presensi', 'Customer::presensi');
+$routes->get('/presensi/(:num)', 'Customer::presensi/$1');
 $routes->post('/input', 'Customer::storepresensi');
 $routes->post('/daftar', 'Customer::storependaftaran');
+
 $routes->get('/detail/(:any)', 'Customer::detailwebinar/$1');
 $routes->get('/notifikasi', 'Customer::notifikasi/$1');
+$routes->get('/sertifikat', 'Customer::sertifikat/$1');
 $routes->get('/lihat', 'Customer::lihat/$1');
 
 // Route Admin
