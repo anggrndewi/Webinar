@@ -22,6 +22,11 @@ class Admin extends BaseController
 
     public function dashboard()
     {
+        $session = session();
+        if($session->get('login')!= TRUE)
+        {
+            return redirect()->to('/login')->with('message', 'Belum Login');
+        }
         echo View('admin/side');
         echo View('admin/topbar');
         echo View('dashboard');
@@ -69,7 +74,7 @@ class Admin extends BaseController
 
     public function logout(){
         $session = session();
-        $session->stop();
+        
         $session->destroy();
         return redirect()->to('/login')->with('message', 'Berhasil Keluar!');
     }

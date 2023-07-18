@@ -18048,7 +18048,21 @@ in APPPATH\Views\deskripsi.php on line 3.
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+<<<<<<< HEAD
 CRITICAL - 2023-07-17 09:27:15 --> Undefined array key 0
+=======
+CRITICAL - 2023-07-17 09:17:33 --> session_destroy(): Trying to destroy uninitialized session
+in SYSTEMPATH\Session\Session.php on line 449.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'session_destroy(): Trying to destroy uninitialized session', 'D:\\xampp\\htdocs\\Webinar\\system\\Session\\Session.php', 449)
+ 2 SYSTEMPATH\Session\Session.php(449): session_destroy()
+ 3 APPPATH\Controllers\Admin.php(78): CodeIgniter\Session\Session->destroy()
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->logout()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+CRITICAL - 2023-07-17 09:21:25 --> Undefined array key 0
+>>>>>>> 36250a2fbdf7070bdd0e87b060d3028c0996bd74
 in APPPATH\Views\deskripsi.php on line 3.
  1 APPPATH\Views\deskripsi.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\xampp\\htdocs\\Webinar\\app\\Views\\deskripsi.php', 3)
  2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\Webinar\\app\\Views\\deskripsi.php')
@@ -18060,7 +18074,11 @@ in APPPATH\Views\deskripsi.php on line 3.
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+<<<<<<< HEAD
 CRITICAL - 2023-07-17 09:27:15 --> Undefined array key 0
+=======
+CRITICAL - 2023-07-17 09:21:25 --> Undefined array key 0
+>>>>>>> 36250a2fbdf7070bdd0e87b060d3028c0996bd74
 in APPPATH\Views\deskripsi.php on line 3.
  1 APPPATH\Views\deskripsi.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\xampp\\htdocs\\Webinar\\app\\Views\\deskripsi.php', 3)
  2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\Webinar\\app\\Views\\deskripsi.php')
@@ -18072,7 +18090,11 @@ in APPPATH\Views\deskripsi.php on line 3.
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+<<<<<<< HEAD
 CRITICAL - 2023-07-17 09:27:15 --> Undefined array key 0
+=======
+CRITICAL - 2023-07-17 09:21:25 --> Undefined array key 0
+>>>>>>> 36250a2fbdf7070bdd0e87b060d3028c0996bd74
 in APPPATH\Views\deskripsi.php on line 3.
  1 APPPATH\Views\deskripsi.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\xampp\\htdocs\\Webinar\\app\\Views\\deskripsi.php', 3)
  2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\Webinar\\app\\Views\\deskripsi.php')
@@ -18084,7 +18106,11 @@ in APPPATH\Views\deskripsi.php on line 3.
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+<<<<<<< HEAD
 CRITICAL - 2023-07-17 09:27:16 --> Undefined array key 0
+=======
+CRITICAL - 2023-07-17 09:21:26 --> Undefined array key 0
+>>>>>>> 36250a2fbdf7070bdd0e87b060d3028c0996bd74
 in APPPATH\Views\deskripsi.php on line 3.
  1 APPPATH\Views\deskripsi.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\xampp\\htdocs\\Webinar\\app\\Views\\deskripsi.php', 3)
  2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\Webinar\\app\\Views\\deskripsi.php')
@@ -18096,6 +18122,7 @@ in APPPATH\Views\deskripsi.php on line 3.
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
+<<<<<<< HEAD
 CRITICAL - 2023-07-17 09:27:16 --> Undefined array key 0
 in APPPATH\Views\deskripsi.php on line 3.
  1 APPPATH\Views\deskripsi.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\xampp\\htdocs\\Webinar\\app\\Views\\deskripsi.php', 3)
@@ -18157,6 +18184,9 @@ in APPPATH\Views\deskripsi.php on line 3.
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\Webinar\\public\\index.php')
 CRITICAL - 2023-07-17 09:31:52 --> Undefined array key 0
+=======
+CRITICAL - 2023-07-17 09:21:26 --> Undefined array key 0
+>>>>>>> 36250a2fbdf7070bdd0e87b060d3028c0996bd74
 in APPPATH\Views\deskripsi.php on line 3.
  1 APPPATH\Views\deskripsi.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\xampp\\htdocs\\Webinar\\app\\Views\\deskripsi.php', 3)
  2 SYSTEMPATH\View\View.php(224): include('D:\\xampp\\htdocs\\Webinar\\app\\Views\\deskripsi.php')
