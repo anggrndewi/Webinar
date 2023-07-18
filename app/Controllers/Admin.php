@@ -27,7 +27,13 @@ class Admin extends BaseController
         {
             return redirect()->to('/login')->with('message', 'Belum Login');
         }
-        echo View('admin/side');
+        $db = db_connect();
+        $data = [
+            'webinar' => $db->query("SELECT COUNT(id) as 'jml' FROM `webinar`")->getRow(),
+            'pendaftaran' => $db->query("SELECT COUNT(id) as 'jml' FROM `pendaftaran`")->getRow(),
+         ];
+
+        echo View('admin/side', $data);
         echo View('admin/topbar');
         echo View('dashboard');
         echo View('admin/footer');
