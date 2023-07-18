@@ -4,6 +4,7 @@ use \App\Models\pendaftaranmodel;
 use \App\Models\webinarModel;
 use \App\Models\presensiModel;
 use \App\Controllers\Email;
+use \App\Controllers\whatsapp;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\Controller;
 
@@ -65,6 +66,7 @@ class Customer extends BaseController
             ];
             $id_webinar=$this->request->getPost('id_webinar');
             $email=$this->request->getPost('email');
+            $nowa=$this->request->getPost('nowa');
             $pendaftaran->save($data);
             
             $db = db_connect();
@@ -75,6 +77,11 @@ class Customer extends BaseController
             $isiemail = $query->pesan."<br><br>Link Webinar = ".$query->linkwebinar."<br><br>Link Presensi = ".$query->linkpresensi;
             //dd($isiemail);
             $kirimemail->send($email, $isiemail);
+
+            $kirimwa = new whatsapp();
+            $isiwa = $query->pesanwa;
+            $kirimwa ->send($nowa, $isiwa);
+
             return redirect()->to('/notifikasi')->with('message', 'Berhasil Submit Data!');
     }
     public function notifikasi($daftar = NULL)

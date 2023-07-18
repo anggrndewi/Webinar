@@ -36,10 +36,15 @@ $session = session();
             <label for="deskwebinar">Link Presensi</label>
             <input type="text" class="form-control" id="linkpresensi" name="linkpresensi" required>
           </div>
-          <!-- Pesan -->
+          <!-- Pesan  Email-->
           <div class="form-group">
-            <label for="pesan">Pesan</label>
+            <label for="pesan">Pesan Email</label>
             <input type="text" class="form-control" id="pesan" name="pesan" required>
+          </div>
+          <!-- Pesan Whatsapp -->
+          <div class="form-group">
+            <label for="pesan">Pesan Whatsapp</label>
+            <textarea class="form-control" id="pesanwa" name="pesanwa" required> </textarea>
           </div>
          
           <!-- Submit Button -->

@@ -20,6 +20,7 @@ $session = session();
                     <th scope="col">Link Webinar</th>
                     <th scope="col">Link Presensi</th>
                     <th scope="col">Pesan</th>
+                    <th scope="col">Pesan whatsapp</th>
                     <th scope="col">Aksi</th>
                   </tr>
                 </thead>
@@ -34,6 +35,7 @@ $session = session();
                   <td><?=$row['linkwebinar'] ?></td>
                   <td><?=$row['linkpresensi'] ?></td>
                   <td><?=$row['pesan'] ?></td>
+                  <td><?=$row['pesanwa'] ?></td>
                   <td>
                     <a href="<?='/ubahdatanotifikasi/'.$row['id']?>" class="btn btn-info d-fluid">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
