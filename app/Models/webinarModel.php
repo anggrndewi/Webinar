@@ -13,6 +13,6 @@ class webinarModel extends Model
 
     protected $returnType     = 'array';
 
-    protected $allowedFields = ['judul', 'waktu', 'deskwebinar', 'poster', 'sertifikat', 'namapemateri', 'deskpemateri'];
+    protected $allowedFields = ['judul', 'waktu', 'deskwebinar', 'poster', 'sertifikat', 'namapemateri', 'deskpemateri', 'foto_pemateri'];
 
 }
