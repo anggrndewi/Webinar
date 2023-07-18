@@ -70,6 +70,7 @@ $routes->post('/tambahdatanotifikasi', 'Admin::storetambahdatanotifikasi');
 $routes->get('/hapusdatanotifikasi/(:num)', 'Admin::hapusdatanotifikasi/$1');
 
 $routes->get('/email', 'Email::send');
+$routes->get('/wa', 'whatsapp::send');
 
 
 $routes->get('/ubahdatanotifikasi/(:num)', 'Admin::ubahdatanotifikasi/$1');

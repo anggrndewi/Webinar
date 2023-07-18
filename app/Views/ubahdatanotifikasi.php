@@ -41,10 +41,15 @@ $session = session();
             <label for="linkpresensi">Link Presensi</label>
             <input type="text" class="form-control" id="linkpresensi" value="<?=$data[0]['linkpresensi']?>" name="linkpresensi" required>
           </div>
-          <!-- Nama Pemateri -->
+          <!-- Pesan Email -->
           <div class="form-group">
-            <label for="pesan">pesan</label>
+            <label for="pesan">Pesan Email</label>
             <input type="text" class="form-control" id="pesan" value="<?=$data[0]['pesan']?>" name="pesan" required>
+          </div>
+          <!-- Pesan Whatsapp -->
+          <div class="form-group">
+            <label for="pesan">Pesan Whatsapp</label>
+            <input type="text" class="form-control" id="pesan" value="<?=$data[0]['pesanwa']?>" name="pesan" required>
           </div>
           
           <!-- Submit Button -->

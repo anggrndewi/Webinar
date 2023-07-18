@@ -235,6 +235,7 @@ class Admin extends BaseController
                 'linkwebinar'=> $this->request->getPost('linkwebinar'),
                 'linkpresensi' => $this->request->getPost('linkpresensi'),
                 'pesan' => $this->request->getPost('pesan'),
+                'pesanwa' => $this->request->getPost('pesanwa'),
             ];
             $tambahdata->save($data);
             return redirect()->to('/datanotifikasi')->with('message', 'Berhasil Submit Data!');
