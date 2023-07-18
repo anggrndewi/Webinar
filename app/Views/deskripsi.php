@@ -1,7 +1,7 @@
 <div class="container-xxl py-5">
     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
         <h1 class="mb-5"><?= $deskwebinar[0]['judul'] ?></h1>
-        <img src="<?= base_url().'assets/img/webinar/'.$deskwebinar[0]['poster']?>" alt="Deskripsi Gambar" width="600px">
+        <img src="<?= base_url().'assets/img/webinar/'.$deskwebinar[0]['poster']?>" alt="Deskripsi Gambar" class="img-fluid">
     </div>
     
     <div class="container">
@@ -18,7 +18,7 @@
 </div>
 <div class="container">
     <h2 class="mb-4" style="font-size: 18px;">Pemateri</h2>
-    <img src="<?= base_url().'assets/img/webinar/'.$deskwebinar[0]['poster']?>" alt="Gambar Pemateri" style="max-width: 200px;">
+    <img src="<?= base_url().'assets/img/webinar/'.$deskwebinar[0]['foto_pemateri']?>" alt="Gambar Pemateri" style="max-width: 200px;">
     <p class="nama-pemateri" style="font-weight: bold;"><?= $deskwebinar[0]['namapemateri']?></p>
     <p class="mb-4"><?= $deskwebinar[0]['deskpemateri']?></p>
 </div>

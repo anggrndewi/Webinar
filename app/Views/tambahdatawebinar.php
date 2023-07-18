@@ -32,6 +32,11 @@ $session = session();
             <label for="namapemateri">Nama Pemateri</label>
             <input type="text" class="form-control" id="namapemateri"  name="namapemateri" required>
           </div>
+          <!-- Foto Pemateri -->
+          <div class="form-group">
+            <label for="deskpemateri">Foto Pemateri</label>
+            <input type="file" class="form-control" id="foto_pemateri"  name="foto_pemateri" required>
+          </div>
           <!-- Deskripsi Pemateri -->
           <div class="form-group">
             <label for="deskpemateri">Deskripsi Pemateri</label>
@@ -47,7 +52,6 @@ $session = session();
             <label for="deskpemateri">Sertifikat</label>
             <input type="file" class="form-control" id="sertifikat"  name="sertifikat" required>
           </div>
-          
           <!-- Submit Button -->
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>

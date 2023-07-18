@@ -113,12 +113,16 @@ class Admin extends BaseController
         $tambahdata = new webinarModel();
         $imgposter = $this->request->getFile('poster');
         $imgsertifikat = $this->request->getFile('sertifikat');
-        if (!$imgposter->hasMoved() and !$imgsertifikat->hasMoved()) {
+        $imgpemateri = $this->request->getFile('foto_pemateri');
+        if (!$imgposter->hasMoved() && !$imgsertifikat->hasMoved() && !$imgpemateri->hasMoved() ) {
             $newNamep = $imgposter->getRandomName();
             $newNames = $imgsertifikat->getRandomName();
+            $newNamem = $imgpemateri->getRandomName();
+            
             $filepath = ROOTPATH.'public/assets/img/webinar/';
             $imgposter->move($filepath,$newNamep);
             $imgsertifikat->move($filepath,$newNames);
+            $imgpemateri->move($filepath,$newNamem);
             $data = [
                 'judul'=> $this->request->getPost('judul'),
                 'waktu' => $this->request->getPost('waktu'),
@@ -127,6 +131,7 @@ class Admin extends BaseController
                 'deskpemateri' => $this->request->getPost('deskpemateri'),
                 'poster' => $newNamep,
                 'sertifikat' => $newNames,
+                'foto_pemateri' => $newNamem,
             ];
             $tambahdata->save($data);
             return redirect()->to('/dashboard')->with('message', 'Berhasil Submit Data!');
