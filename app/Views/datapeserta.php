@@ -10,7 +10,10 @@ $session = session();
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+            <?php if (count($datapeserta) > 0) { ?>
+            <?php $row = $datapeserta[0]; ?>
+                <a href="<?= '/exportpeserta/'.$row['id_webinar'] ?>" type="button" class="btn btn-primary">Export data</a>
+            <?php } ?>
         </div>
         <div class="card-body">
             <div class="table-responsive">

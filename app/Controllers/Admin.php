@@ -7,6 +7,8 @@ use App\Models\webinarModel;
 use App\Models\notifikasiModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\Controller;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Admin extends BaseController
 {
@@ -291,6 +293,112 @@ class Admin extends BaseController
         }else{
             return redirect()->back('/datanotifikasi')->with('message', 'Gagal Hapus data!');
         }
+    }
+    public function exportpeserta($id)
+    {
+        $datapeserta = new pendaftaranmodel();
+        $data = $datapeserta->where('id_webinar', $id)->findAll();
+    
+        $spreadsheet = new Spreadsheet();
+        $activeWorksheet = $spreadsheet->getActiveSheet();
+        $activeWorksheet->setCellValue('A1', 'No');
+        $activeWorksheet->setCellValue('B1', 'Nama');
+        $activeWorksheet->setCellValue('C1', 'Email');
+        $activeWorksheet ->setCellValue('D1', 'Whatsapp');
+        $activeWorksheet->setCellValue('E1', 'Alamat');
+        $column = 2;
+        $no = 1;
+        // tulis data peserta ke cell
+        foreach ($data as $key => $item) {
+            $activeWorksheet->setCellValue('A' . $column, $no++);
+            $activeWorksheet->setCellValue('B' . $column, $item['nama']);
+            $activeWorksheet->setCellValue('C' . $column, $item['email']);
+            $activeWorksheet->setCellValue('D' . $column, $item['nowa']);
+            $activeWorksheet->setCellValue('E' . $column, $item['alamat']);
+            $column++;
+        }
+        $activeWorksheet->getStyle('A1:E1')->getFont()->setBold(true);
+        $activeWorksheet->getStyle('A1:E1')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)
+                                           ->getStartColor()->setARGB('FFFFFF00');
+        $styleArray = [
+            'borders' => [
+                'allBorders' => [
+                    'bordeStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN,
+                    'color' => ['argb' => 'FF000000'],
+                ],
+            ],
+        ];
+
+        $activeWorksheet->getStyle('A1:E'.($no++))->applyFromArray($styleArray);
+
+        $activeWorksheet->getColumnDimension('A')->setAutoSize(true);
+        $activeWorksheet->getColumnDimension('B')->setAutoSize(true);
+        $activeWorksheet->getColumnDimension('C')->setAutoSize(true);
+        $activeWorksheet->getColumnDimension('D')->setAutoSize(true);
+        $activeWorksheet->getColumnDimension('E')->setAutoSize(true);
+
+        $writer = new Xlsx($spreadsheet);
+        $file_name = 'data_peserta_webinar_' . date('YmdHis') . '.xlsx'; // Nama file Excel unik dengan timestamp
+        // header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        // header('Content-')
+        $writer->save('assets/export/'. $file_name);
+        return redirect()->to('assets/export/'. $file_name);
+        
+    }
+    
+
+    public function exportpresensi($id_webinar=NULL)
+    {
+        
+        $spreadsheet = new Spreadsheet();
+        $activeWorksheet = $spreadsheet->getActiveSheet();
+        $activeWorksheet->setCellValue('A1', 'No')
+                        ->setCellValue('B1', 'Nama')
+                        ->setCellValue('C1', 'Email')
+                        ->setCellValue('D1', 'Whatsapp')
+                        ->setCellValue('E1', 'Alamat');
+        $column = 2;
+        $no = 1;
+        // $data = json_decode($member->getBody());
+        // tulis data mobil ke cell
+        $datapresensi = new presensiModel();
+        $data = $datapresensi->WHERE('id_webinar', $id_webinar)->findAll();
+        foreach($data as $data) {
+            $activeWorksheet->setCellValue('A' . $column, $no++)
+                        ->setCellValue('B' . $column, $data['nama'])
+                        ->setCellValue('C' . $column, $data['email'])
+                        ->setCellValue('D' . $column, $data['nowa'])
+                        ->setCellValue('E' . $column, $data['alamat']);
+            $column++;
+        }
+
+        $activeWorksheet->getStyle('A1:E1')->getFont()->setBold(true);
+        $activeWorksheet->getStyle('A1:E1')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)
+                                           ->getStartColor()->setARGB('FFFFFF00');
+        $styleArray = [
+            'borders' => [
+                'allBorders' => [
+                    'bordeStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN,
+                    'color' => ['argb' => 'FF000000'],
+                ],
+            ],
+        ];
+
+        $activeWorksheet->getStyle('A1:E'.($no++))->applyFromArray($styleArray);
+
+        $activeWorksheet->getColumnDimension('A')->setAutoSize(true);
+        $activeWorksheet->getColumnDimension('B')->setAutoSize(true);
+        $activeWorksheet->getColumnDimension('C')->setAutoSize(true);
+        $activeWorksheet->getColumnDimension('D')->setAutoSize(true);
+        $activeWorksheet->getColumnDimension('E')->setAutoSize(true);
+
+        $writer = new Xlsx($spreadsheet);
+        $file_name = 'data_presensi_webinar_' . date('YmdHis') . '.xlsx'; // Nama file Excel unik dengan timestamp
+        // header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        // header('Content-')
+        $writer->save('assets/export/'. $file_name);
+        return redirect()->to('assets/export/'. $file_name);
+        
     }
     
 }

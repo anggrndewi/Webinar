@@ -11,9 +11,9 @@ $session = session();
               }
           ?>
           <!-- Content Row -->
-          <div class="row">
-            <div class="col-lg-12">
-              <table class="table">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered">
                 <thead>
                   <tr>
                     <th scope="col">No</th>

@@ -25,7 +25,7 @@ $session = session();
            <!-- Deskripsi Webinar -->
           <div class="form-group">
             <label for="deskwebinar">Deskripsi webinar</label>
-            <input type="text" class="form-control" id="deskwebinar"  name="deskwebinar" required>
+            <textarea class="form-control" id="deskwebinar"  name="deskwebinar" required></textarea>
           </div>
           <!-- Nama Pemateri -->
           <div class="form-group">

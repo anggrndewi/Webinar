@@ -1,6 +1,7 @@
 <?php
 $session = session();
 ?>
+
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
@@ -10,7 +11,10 @@ $session = session();
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Berikut ini adalah data presensi peserta webinar.</h6>
+        <?php if (count($datapresensi) > 0) { ?>
+            <?php $row = $datapresensi[0]; ?>
+                <a href="<?= '/exportpresensi/'.$row['id_webinar'] ?>" type="button" class="btn btn-primary">Export data</a>
+            <?php } ?>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -54,4 +58,5 @@ $session = session();
     </div>
 
 </div>
+
 <!-- /.container-fluid -->
